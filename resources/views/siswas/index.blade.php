@@ -19,7 +19,7 @@
             <h3 class="text-2xl font-bold mb-2">Tutorial Laravel 13 untuk Pemula</h3>
             <h5 class="text-sm">
                 <a href="https://santrikoding.com" class="text-blue-600 hover:underline">
-                    www.santrikoding.com
+                    SMK Pesat 
                 </a>
             </h5>
             <hr class="my-6 border-gray-200">
