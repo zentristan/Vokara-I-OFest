@@ -87,13 +87,15 @@
         </div>
     </section>
 </div>
-    <footer class="footer">
+<br>
+    <footer class="footer d-flex">
         <div class="footer-left">
-            <h2>Vokara</h2>
-            <p>Website Freelance khusus siswa SMK</p>
+            <img src="{{ asset('images/VokaraLight.png') }}" alt="Logo Vokara" width="120" height="80">
+            <p>Website Freelance khusus siswa 
+                SMK</p>
         </div>
 
-        <div class="footer-links">
+        <div class="footer-links d-flex">
             <div>
                 <h4>Page 1</h4>
                 <p>Menengah</p>
@@ -116,12 +118,13 @@
             </div>
         </div>
 
-        <div class="map">Map</div>
+        <div class="map"><p>Map</p></div>
+    </footer>
 
-        <p class="copyright">
+
+        <p class="copyright text-light text-center">
             &copy; 2026 Vokara. Seluruh Hak Cipta Dilindungi Undang-Undang
         </p>
-    </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
 </body>
