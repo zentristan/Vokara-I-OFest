@@ -1,0 +1,65 @@
+:root {
+    --primary-color: #1D9E75;
+    --accent-color: #5DCAA5;
+    --highlight-color: #EF9F27;
+    --card-color: #0F2D2B;
+    --background-color: #0E1A1F;
+    --text-color: #e0f2ec;
+}
+
+body {
+    background-color: var(--background-color);
+    scrollbar-width: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.navbar {
+    background-color: var(--card-color);
+    padding: 1px 20px 1px 20px;
+    align-items: center;
+}
+nav {
+    margin-left: 50px;
+}
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 50px;
+    font-size: 16px;
+}
+.masuk a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 16px;
+}
+.masuk button {
+    background-color: var(--card-color);
+    border-color: var(--text-color);
+    color: var(--text-color);
+    border-radius: 6px;
+    font-family: "Outfit", sans-serif;
+    padding: 4px 20px;
+}
+.hero {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background-repeat: no-repeat;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+}
+.hero h1 {
+    font-family: "Cormorant Garamond", serif;
+    color: var(--text-color);
+    font-size: 48px;
+}
+.hero-title {
+    padding-top: 35px;
+}
+.kontener {
+    max-width: 1475px;
+    margin: 0 auto;
+    padding: 0px 20px 20px 20px;
+}
