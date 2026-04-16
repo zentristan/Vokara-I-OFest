@@ -13,6 +13,14 @@ Route::get('/LowonganJasa', function () {
     return view('Lowongan_Jasa/lowonganjasa');
 });
 
+Route::get('/Sidebar', function () {
+    return view('components.sidebar');
+});
+
+Route::get('/Dashboard', function () {
+    return view('Dashboard_Siswa.dashboard_siswa');
+});
+
 // Route::get('/Footer', function () {
 //     return view('components.footer');
 // });

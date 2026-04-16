@@ -1,0 +1,140 @@
+:root {
+    --primary-color: #1D9E75;
+    --accent-color: #5DCAA5;
+    --highlight-color: #EF9F27;
+    --card-color: #0F2D2B;
+    --background-color: #0E1A1F;
+    --text-color: #e0f2ec;
+}
+.sidebar {
+    background-color: var(--card-color);
+    width: 23%;
+    min-height: 100vh;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-header {
+    padding: 8px 20px;
+    border-bottom: 1px solid white;
+}
+.sidebar-header img {
+    display: block;
+}
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 15px;
+    border-bottom: 1px solid white;
+}
+.profil-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 10px;
+}
+.card-profil {
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    background-color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-profil p {
+    color: black;
+    font-family: "Outfit", sans-serif;
+    font-size: 12px;
+    margin: 0;
+    text-align: center;
+}
+.profil-info h2 {
+    font-family: "Outfit", sans-serif;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 0 3px 0;
+}
+.profil-info p {
+    font-family: "Outfit", sans-serif;
+    color: gray;
+    font-size: 12px;
+    margin: 0;
+}
+.badges{
+    display: flex;
+    gap: 5px;
+    background-color: var(--accent-color);
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+}
+.badges p{
+    color: gray;
+    font-family: "Outfit", sans-serif;
+    font-size: 10px;
+    margin-left: 50px;
+    margin-top: -5px;
+}
+.card-profil1 {
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    background-color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;;
+}
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 15px;
+    border-bottom: 1px solid white;
+}
+.sidebar-nav ul li{
+    font-family: "Outfit", sans-serif;
+    margin-top: 20px;
+    list-style-type: none;
+    color: gray;
+}
+.sidebar-nav ul li.active {
+    color: var(--text-color);
+    display: block;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 17px;
+    margin-left: -20px;
+}
+.sidebar-bottom ul li{
+    font-family: "Outfit", sans-serif;
+    margin-top: 20px;
+    list-style-type: none;
+    color: gray;
+}
+.sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 15px;
+}
+.sidebar-nav ul li.active i{
+    color: white;
+    margin-right: 20px;
+}
+.sidebar-nav ul li i{
+    color: gray;
+    margin-right: 20px;
+}
+.sidebar-botto ul li.active i{
+    color: white;
+    margin-right: 20px;
+}
+.sidebar-bottom ul li i{
+    color: gray;
+    margin-right: 20px;
+}
