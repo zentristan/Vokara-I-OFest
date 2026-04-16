@@ -1,14 +1,20 @@
 :root {
     --primary-color: #1D9E75;
     --accent-color: #5DCAA5;
-    --backgrounc-color: #0E1A1F;
+    --background-color: #0E1A1F;
     --text-color: #E0F2EC;
     --card-color: #0F2D2B;
 }
 * {
     box-sizing: border-box;
 }
-
+body {
+    background-color: var(--background-color);
+    scrollbar-width: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
 .nav-body {
     background-color: var(--card-color);
     color: var(--text-color);
@@ -30,23 +36,21 @@
     display: flex;
     gap: 80px;
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 #nav-link a {
     color: var(--text-color);
     text-decoration: none;
     font-size: 18px;
 }
-.masuk a {
-    color: var(--text-color);
-    text-decoration: none;
-    margin-right: 20px;
-    font-size: 16px;
-}
-.masuk button {
-    background-color: #0f2d2b;
-    border-color: var(--text-color);
-    color: var(--text-color);
-    border-radius: 6px;
-    font-family: "Outfit", sans-serif;
-    padding: 4px 20px;
+.hero {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background-repeat: no-repeat;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    border-top: 1px solid var(--card-color);
+    border-bottom: 1px solid var(--card-color);
 }
