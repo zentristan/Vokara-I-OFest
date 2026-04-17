@@ -1,6 +1,6 @@
 <footer class="footer d-flex">
     <div class="footer-left">
-        <img src="{{ asset('images/VokaraLight.png') }}" alt="Logo Vokara" width="140" height="100">
+        <img src="{{ asset('images/VokaraLight.png') }}" alt="Logo Vokara" width="140">
         <p>Website Freelance khusus siswa</p>
         <p class="smk">SMK</p>
     </div>

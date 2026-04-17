@@ -36,14 +36,14 @@
 
 </head>
 
+<x-layout>
 <body>
-<x-navbar_template/>
 
     <div class="container">
         <section class="hero" style="background-image: url('{{ asset('images/background.png') }}');">
     </div>
 
-
+</x-layout>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
