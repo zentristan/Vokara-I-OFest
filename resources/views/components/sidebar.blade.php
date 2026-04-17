@@ -1,4 +1,4 @@
-    <section class="sidebar">
+<section class="sidebar">
     <div class="sidebar-header">
         <img src="{{ asset('images/VokaraLight.png') }}" alt="Logo Vokara" width="120" height="80">
     </div>
