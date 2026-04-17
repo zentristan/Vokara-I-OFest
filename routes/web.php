@@ -10,7 +10,11 @@ Route::get('/', function () {
 });
 
 Route::get('/LowonganJasa', function () {
-    return view('Lowongan_Jasa/lowonganjasa');
+    return view('Lowongan_Jasa.lowonganjasa');
+});
+
+Route::get('/PasarJasa', function () {
+    return view('Pasar_Jasa.pasarjasa');
 });
 
 Route::get('/Sidebar', function () {
@@ -20,16 +24,3 @@ Route::get('/Sidebar', function () {
 Route::get('/Dashboard', function () {
     return view('Dashboard_Siswa.dashboard_siswa');
 });
-
-// Route::get('/Footer', function () {
-//     return view('components.footer');
-// });
-
-// Route::get('/Navbar', function () {
-//     return view('components.navbar');
-// });
-
-
-// Route::get('/siswa', function () {
-//     return view('siswas.index');
-// });

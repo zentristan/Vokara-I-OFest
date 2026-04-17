@@ -1,0 +1,148 @@
+:root {
+    --primary-color: #1D9E75;
+    --accent-color: #5DCAA5;
+    --background-color: #0E1A1F;
+    --text-color: #E0F2EC;
+    --card-color: #0F2D2B;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-body {
+    background-color: var(--card-color);
+    color: var(--text-color);
+    height: 70px;
+    width: auto;
+    border: 1px solid var(--background-color)
+}
+
+.navbar {
+    background-color: var(--card-color);
+    margin: auto;
+    width: 1320px;
+    height: 70px;
+    align-items: center;
+    position: relative;
+}
+
+.nav-logo {
+    width: auto;
+    height: 60px;
+}
+
+#nav-link {
+    display: flex;
+    gap: 80px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#nav-link a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sub-menu-wrap {
+    position: absolute;
+    top: 96%;
+    right: 0;
+    width: 320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+.sub-menu-wrap.open-menu {
+    max-height: 400px;
+}
+
+.sub-menu {
+    background: var(--card-color);
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--background-color);
+    position: relative;
+    z-index: 1;
+}
+
+.user-info {
+    align-items: center;
+}
+
+.profile {
+    height: 36px;
+    width: auto;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.profile-dropdown {
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.username-dropdown {
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+    width: fit-content;
+}
+
+.status-akun {
+    font-size: 16px;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.sub-menu hr {
+    border: 1px solid var(--text-color);
+    margin: 15px 0 10px;
+    width: 100%;
+}
+.dropdown-link a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+}
+.dropdown-link a:hover {
+    color: var(--accent-color);
+    font-weight: 500;
+}
+.dropdown-link img:hover {
+    color: var(--accent-color);
+    font-weight: 500;
+}
+.dropdown-link li {
+    list-style-type: none;
+    padding: 5px 0;
+}
+.icon-logout {
+    width: auto;
+    height: 20px;
+    margin: 4px 5px 0 0;
+}
+.hero {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background-repeat: no-repeat;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+}
