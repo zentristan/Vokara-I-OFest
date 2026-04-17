@@ -4,6 +4,7 @@
     </div>
 
     <div class="sidebar-content">
+
         <div class="profil-row">
             <div class="card-profil">
                 <p>Foto</p>
@@ -19,7 +20,7 @@
             <div class="card-profil1"></div>
             <div class="card-profil1"></div>
             <p>+9 Lencana</p>
-        </div>
+         </div>
     </div>
 
     <div class="sidebar-nav">
@@ -41,14 +42,3 @@
     </div>
 
 </section>
-
-<script>
-    const navItems = document.querySelectorAll('.sidebar-nav ul li');
-
-    navItems.forEach(item => {
-        item.addEventListener('click', function () {
-            navItems.forEach(li => li.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
-</script>
