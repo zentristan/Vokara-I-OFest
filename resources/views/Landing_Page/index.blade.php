@@ -138,10 +138,10 @@
                 </div>
             </div>
             <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper pb-5 pt-5 trig-fade-left enable-trig">
                     <div class="swiper-slide">
                         <div class="keahlianCard1" style="--bg: url('{{ asset('images/keahlianCard.png') }}')">
-                            <div class="konten-keahlian d-flex justify-content-center align-items-center flex-column">
+                            <div class="cover-keahlian d-flex justify-content-center align-items-center flex-column">
                                 <h1 class="whiteMain-text fw-bold fs-1">P</h1>
                                 <h1 class="whiteMain-text fw-bold fs-1">O</h1>
                                 <h1 class="whiteMain-text fw-bold fs-1">P</h1>
@@ -152,50 +152,116 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide trig-target">
                         <div class="keahlianCard2" style="--bg: url('{{ asset('images/keahlianCard.png') }}')">
                             <div class="cover-keahlian d-flex justify-content-center align-items-center flex-column">
-                                <i class="fa-solid fa-palette" style="color: rgb(224, 242, 236); font-size: 5rem;"></i>
-                                <h2 class="CardKonten-heading">Desain Grafis</h2>
+                                <i class="fa-solid fa-palette mb-4" style="color: rgb(224, 242, 236); font-size: 5rem;"></i>
+                                <h2 class="CardKonten-heading text-center">Desain Grafis</h2>
+                            </div>
+                            <div class="konten-keahlian d-flex flex-column justify-content-center align-items-center">
+                                <i class="fa-solid fa-palette mb-5" style="color: rgb(224, 242, 236); font-size: 3rem;"></i>
+                                <p class="text-start border-start border-3 border-white ps-3">Desain grafis adalah seni komunikasi visual yang menggabungkan elemen tipografi, ilustrasi, fotografi, dan warna untuk menyampaikan pesan secara efektif dan estetis.</p>
+                                <h3 class="text-center fw-bold"><span class="text-white">●</span>183 Freelancer</h3>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide trig-target">
                         <div class="keahlianCard3" style="--bg: url('{{ asset('images/keahlianCard.png') }}')">
-                            <div class="cover-keahlian">
-                                <h1 class="text-white">Hello World</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore sunt ullam adipisci quibusdam, soluta eos? Eveniet incidunt suscipit tempora molestiae?</p>
+                            <div class="cover-keahlian d-flex justify-content-center align-items-center flex-column">
+                                <i class="fa-solid fa-code mb-4" style="color: rgb(224, 242, 236); font-size: 5rem;"></i>
+                                <h2 class="CardKonten-heading text-center">Web Dev</h2>
+                            </div>
+                            <div class="konten-keahlian d-flex flex-column justify-content-center align-items-center">
+                                <i class="fa-solid fa-code mb-5" style="color: rgb(224, 242, 236); font-size: 3rem;"></i>
+                                <p class="text-start border-start border-3 border-white ps-3">Web development adalah proses membangun dan memelihara situs web atau aplikasi berbasis peramban agar dapat berfungsi secara optimal di internet.</p>
+                                <h3 class="text-center fw-bold"><span class="text-white">●</span>241 Freelancer</h3>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide trig-target">
                         <div class="keahlianCard4" style="--bg: url('{{ asset('images/keahlianCard.png') }}')">
-                            <div class="cover-keahlian">
-                                <h1 class="text-white">Hello World</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore sunt ullam adipisci quibusdam, soluta eos? Eveniet incidunt suscipit tempora molestiae?</p>
+                            <div class="cover-keahlian d-flex justify-content-center align-items-center flex-column">
+                                <i class="fa-solid fa-film mb-4" style="color: rgb(224, 242, 236); font-size: 5rem;"></i>
+                                <h2 class="CardKonten-heading text-center">Video Editing</h2>
                             </div>
-                            <div class="konten-keahlian">
-                                
+                            <div class="konten-keahlian d-flex flex-column justify-content-center align-items-center">
+                                <i class="fa-solid fa-film mb-5" style="color: rgb(224, 242, 236); font-size: 3rem;"></i>
+                                <p class="text-start border-start border-3 border-white ps-3">Video editing adalah proses memodifikasi dan mengedit klip video untuk menciptakan karya yang menarik dan bermakna.</p>
+                                <h3 class="text-center fw-bold"><span class="text-white">●</span>134 Freelancer</h3>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide trig-target">
                         <div class="keahlianCard5" style="--bg: url('{{ asset('images/keahlianCard.png') }}')">
-                            <div class="cover-keahlian">
-                                <h1 class="text-white">Hello World</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore sunt ullam adipisci quibusdam, soluta eos? Eveniet incidunt suscipit tempora molestiae?</p>
+                            <div class="cover-keahlian d-flex justify-content-center align-items-center flex-column">
+                                <i class="fa-solid fa-share-nodes mb-4" style="color: rgb(224, 242, 236); font-size: 5rem;"></i>
+                                <h2 class="CardKonten-heading text-center">Social Manager</h2>
+                            </div>
+                            <div class="konten-keahlian d-flex flex-column justify-content-center align-items-center">
+                                <i class="fa-solid fa-share-nodes mb-5" style="color: rgb(224, 242, 236); font-size: 3rem;"></i>
+                                <p class="text-start border-start border-3 border-white ps-3">Manajemen media sosial mencakup perencanaan, pembuatan, dan penjadwalan konten untuk platform media sosial guna berinteraksi dengan audiens dan mempromosikan merek.</p>
+                                <h3 class="text-center fw-bold"><span class="text-white">●</span>98 Freelancer</h3>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination text-white"></div>
             </div>
         </div>
     </section>
     <section class="testimonials">
-        <div class="container">
-
-        </div>
+        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+            <div class="parallax-bg" style="--bg: url('{{ asset('images/Testimonials-bg.png') }}')" data-swiper-parallax="-23%"></div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="title" data-swiper-parallax="-300">Slide 1</div>
+                    <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+                    <div class="text" data-swiper-parallax="-100">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                            dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+                            laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+                            Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+                            Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+                            ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+                            tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title" data-swiper-parallax="-300">Slide 2</div>
+                    <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+                    <div class="text" data-swiper-parallax="-100">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                            dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+                            laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+                            Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+                            Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+                            ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+                            tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title" data-swiper-parallax="-300">Slide 3</div>
+                    <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+                    <div class="text" data-swiper-parallax="-100">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                            dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+                            laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+                            Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+                            Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+                            ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+                            tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
     </section>
 
     <section class="starting">
@@ -206,6 +272,18 @@
     <!-- Swiper.Js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script>
+        var swiper = new Swiper(".mySwiper2", {
+            speed: 600,
+            parallax: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 3,
             spaceBetween: 5,
@@ -221,11 +299,11 @@
             breakpoints: {
                 320: {
                     slidesPerView: 1,
-                    spaceBetween: 5,
+                    spaceBetween: 15,
                 },
                 640: {
                     slidesPerView: 2,
-                    spaceBetween: 5,
+                    spaceBetween: 15,
                 },
                 768: {
                     slidesPerView: 3,

@@ -10,9 +10,11 @@
     --secondary-font: "Outfit", sans-serif;
     --accent-font: "Cormorant Garamond", serif;
 }
-.whiteMain-text{
+
+.whiteMain-text {
     color: var(--text-color);
 }
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -30,12 +32,16 @@
 #mainNavbar.bounce-up {
     transform: translateX(-50%) translateY(-10px);
 }
+
 body {
     background-color: var(--background-color);
     -ms-overflow-style: none;
     /* IE/Edge */
     scrollbar-width: none;
     /* Firefox */
+}
+section{
+    padding: 50px 0;
 }
 
 .container {
@@ -118,6 +124,7 @@ body {
     font-weight: 600;
     color: var(--text-color);
     font-family: var(--secondary-font);
+    transition: all 0.5s;
 }
 
 .btn-primary:hover,
@@ -125,6 +132,7 @@ body {
     color: var(--background-color);
     transition: all 0.5s;
     background-color: var(--text-color);
+    transform: translateY(-3px);
 }
 
 .nav-button {
@@ -169,7 +177,7 @@ body {
     opacity: 0.5;
 }
 
-.heading-tentang{
+.heading-tentang {
     font-family: var(--secondary-font);
     color: var(--text-color);
     font-weight: 700;
@@ -177,6 +185,7 @@ body {
     margin-top: 1rem;
     letter-spacing: 0.8rem;
 }
+
 .heading-kami {
     font-size: 3.5rem;
     margin-top: -20px;
@@ -195,23 +204,27 @@ body {
     height: 550px;
     margin-right: -10rem;
 }
-.PartnerLogo{
+
+.PartnerLogo {
     filter: brightness(0) invert(1);
     opacity: 50%;
     /* filter: invert(89%) sepia(21%) saturate(115%) hue-rotate(105deg) brightness(106%) contrast(90%); */
 }
+
 .PartnerLogo:hover {
     filter: brightness(0) invert(1) sepia(21%) saturate(115%) hue-rotate(105deg) brightness(106%) contrast(90%);
     opacity: 100%;
     transition: all 0.5s;
 }
-.Heading-partner{
+
+.Heading-partner {
     font-family: var(--secondary-font);
     color: var(--text-color);
     font-weight: 700;
     font-size: 1.3rem;
     font-weight: 500;
 }
+
 .keahlianCard1,
 .keahlianCard2,
 .keahlianCard3,
@@ -219,16 +232,20 @@ body {
 .keahlianCard5 {
     position: relative;
     height: 500px;
-    /* overflow: hidden; */
+    overflow: hidden;
     border-radius: 100px;
-    transition: all 0.5s;
+    transition: transform 0.25s, border-color 0.25s;
+    padding: 1.25rem;
 }
+
 .keahlianCard1:hover,
 .keahlianCard2:hover,
 .keahlianCard3:hover,
 .keahlianCard4:hover,
 .keahlianCard5:hover {
-    transform: scale(1.5);
+    transform: translateY(-10px);
+    border-color: var(--text-color);
+    box-shadow: 0 10px 15px rgba(22, 67, 64, 0.35);
 }
 
 .keahlianCard1::before,
@@ -246,11 +263,21 @@ body {
     border-radius: 100px;
 }
 
-.keahlianCard1::before { opacity: 0.5; }
-.keahlianCard2::before { opacity: 0.4; }
-.keahlianCard3::before { opacity: 0.3; }
-.keahlianCard4::before { opacity: 0.2; }
-.keahlianCard5::before { opacity: 0.1; }
+.keahlianCard1::before {
+    opacity: 0.5;
+}
+.keahlianCard2::before {
+    opacity: 0.4;
+}
+.keahlianCard3::before {
+    opacity: 0.3;
+}
+.keahlianCard4::before {
+    opacity: 0.2;
+}
+.keahlianCard5::before {
+    opacity: 0.1;
+}
 
 .cover-keahlian {
     position: absolute;
@@ -259,9 +286,40 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     z-index: 1;
+    transition: opacity 0.25s, transform 0.25s;
 }
-.CardKonten-heading{
-    font-family: var(--accent-font);
+
+.CardKonten-heading {
+    font-family: var(--body-font);
     color: var(--text-color);
-    font-weight: 700;
+    font-weight: 600;
+}
+
+.konten-keahlian{
+    position: absolute;
+    inset: 0;
+    padding: 1.25rem;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.25s, transform 0.25s;
+    pointer-events: none;
+    color: var(--text-color);
+    font-family: var(--body-font);
+    font-weight: 500;
+}
+.keahliancard1:hover .konten-keahlian,
+.keahlianCard2:hover .konten-keahlian,
+.keahlianCard3:hover .konten-keahlian,
+.keahlianCard4:hover .konten-keahlian,
+.keahlianCard5:hover .konten-keahlian{
+    opacity: 1;
+    transform: translateY(0);
+}
+.keahlianCard2:hover .cover-keahlian,
+.keahlianCard3:hover .cover-keahlian,
+.keahlianCard4:hover .cover-keahlian,
+.keahlianCard5:hover .cover-keahlian {
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
 }
