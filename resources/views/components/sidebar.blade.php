@@ -1,6 +1,6 @@
 <section class="sidebar">
     <div class="sidebar-header">
-        <img src="{{ asset('images/VokaraLight.png') }}" alt="Logo Vokara" width="120" height="80">
+        <img src="{{ asset('images/VokaraLight.png') }}" alt="Logo Vokara" width="110" height="50" style="margin-left: 35px; margin-top: 20px; margin-bottom: 20px;">
     </div>
 
     <div class="sidebar-content">
@@ -25,7 +25,7 @@
 
     <div class="sidebar-nav">
         <ul>
-            <li class="active"><i class="bi bi-columns-gap"></i>Beranda</li>
+            <li class="active"><i class="bi bi-columns-gap"></i>Overview</li>
             <li><i class="bi bi-send"></i>Lamaranku</li>
             <li><i class="bi bi-suitcase-lg"></i>Proyek Aktif</li>
             <li><i class="bi bi-folder2-open"></i>Portofolio</li>

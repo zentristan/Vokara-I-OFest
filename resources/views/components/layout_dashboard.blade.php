@@ -20,9 +20,10 @@
     {{-- CSS --}}
     <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/dashboard_siswa.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/lamaran_siswa.css') }}">
     
 </head>
-<body class="d-flex">
+<body>
 
         <x-sidebar></x-sidebar>
 
