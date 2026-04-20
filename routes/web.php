@@ -8,6 +8,18 @@ Route::resource('/siswas', SiswaController::class);
 Route::get('/', function () {
     return view('welcome');
 });
-// Route::get('/siswa', function () {
-//     return view('siswas.index');
-// });
+
+Route::get('/LowonganJasa', function () {
+    return view('Lowongan_Jasa.lowonganjasa');
+});
+
+Route::get('/PasarJasa', function () {
+    return view('Pasar_Jasa.pasarjasa');
+});
+
+Route::get('/Dashboard', function () {
+    return view('Dashboard_Siswa.dashboard_siswa');
+});
+Route::get('/LandingPage', function () {
+    return view('Landing_Page/index');
+});
