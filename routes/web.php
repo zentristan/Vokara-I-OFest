@@ -13,6 +13,10 @@ Route::get('/LowonganJasa', function () {
     return view('Lowongan_Jasa.lowonganjasa');
 });
 
+Route::get('/LowonganJasaNo', function () {
+    return view('Lowongan_Jasa.lowonganjasano');
+});
+
 Route::get('/PasarJasa', function () {
     return view('Pasar_Jasa.pasarjasa');
 });
@@ -38,4 +42,12 @@ Route::get('/LandingPage', function () {
 
 Route::get('/Lamaran', function () {
     return view('Lamaran_Siswa.lamaran_siswa');
+});
+
+Route::get('/Proyek', function () {
+    return view('Proyek_Siswa.proyek_siswa');
+});
+
+Route::get('/Portofolio', function () {
+    return view('Portofolio_Siswa.portofolio_siswa');
 });

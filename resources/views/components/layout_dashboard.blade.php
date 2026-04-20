@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/dashboard_siswa.css') }}">
     <link rel="stylesheet" href="{{ asset('css/lamaran_siswa.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/proyek.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/portofolio_siswa.css') }}">
     
 </head>
 <body>

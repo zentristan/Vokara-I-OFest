@@ -140,7 +140,7 @@
     margin-right: 14px;
 }
 .sidebar-nav ul li.active i {
-    color: white;
+    color: black;
     margin-right: 14px;
 }
 .sidebar-nav ul li a,
@@ -159,4 +159,8 @@
     color: #000;
     font-weight: 500;
     border-radius: 8px;
+}
+
+a{
+    text-decoration: none;
 }
