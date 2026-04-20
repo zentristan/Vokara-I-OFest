@@ -1,0 +1,414 @@
+:root {
+    --background-color: #0E1A1F;
+    --card-color: #0F2D2B;
+    --primary-color: #1D9E75;
+    --accent-color: #5DCAA5;
+    --highlight-color: #EF9F27;
+    --text-color: #E0F2EC;
+
+    --body-font: "Plus Jakarta Sans", sans-serif;
+    --secondary-font: "Outfit", sans-serif;
+    --accent-font: "Cormorant Garamond", serif;
+}
+
+.whiteMain-text {
+    color: var(--text-color);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#mainNavbar {
+    transform-origin: top center;
+    transform: translateX(-50%);
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#mainNavbar.bounce-down {
+    transform: translateX(-50%) translateY(10px);
+}
+
+#mainNavbar.bounce-up {
+    transform: translateX(-50%) translateY(-10px);
+}
+
+body {
+    background-color: var(--background-color);
+    -ms-overflow-style: none;
+    /* IE/Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+section {
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    transition: all 0.5s;
+    border-radius: 3px;
+}
+
+.navbar {
+    background-color: transparent;
+    padding: 0.5rem 0;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 50px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border: 0.5px solid rgba(224, 242, 236, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+.nav-menu {
+    display: flex;
+    margin: auto;
+}
+
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 10px 15px;
+    font-family: var(--secondary-font);
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.logo-image {
+    width: auto;
+    height: 80px;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: flex;
+    align-items: end;
+    padding: 10px 20px;
+    border: 0.1px solid var(--text-color);
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-color);
+    font-family: var(--secondary-font);
+    transition: all 0.5s;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    color: var(--background-color);
+    transition: all 0.5s;
+    background-color: var(--text-color);
+    transform: translateY(-3px);
+}
+
+.nav-button {
+    gap: 20px;
+}
+
+.hero {
+    background-image: url(/images/HeroBackground.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 105vh;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Bagian rotating text nya */
+#rotating-text {
+    transition: opacity 0.4s ease;
+    color: #F59E0B;
+    /* amber gold semai */
+}
+
+#rotating-text.fade-out {
+    opacity: 0;
+}
+
+.HeroTagline-Text {
+    font-family: var(--accent-font);
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.HeroDescription-Text {
+    font-family: var(--secondary-font);
+    font-size: 1.25rem;
+    color: var(--text-color);
+    margin-top: 50px;
+    font-weight: 300;
+    font-style: italic;
+    opacity: 0.5;
+}
+
+.heading-tentang {
+    font-family: var(--secondary-font);
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 4rem;
+    margin-top: 1rem;
+    letter-spacing: 0.5rem;
+}
+
+.heading-kami {
+    font-size: 3.5rem;
+    margin-top: -20px;
+}
+
+.tentang-deskripsi {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.tentangKami-image {
+    width: auto;
+    height: 550px;
+    margin-right: -10rem;
+}
+
+.PartnerLogo {
+    filter: brightness(0) invert(1);
+    opacity: 50%;
+    /* filter: invert(89%) sepia(21%) saturate(115%) hue-rotate(105deg) brightness(106%) contrast(90%); */
+}
+
+.PartnerLogo:hover {
+    filter: brightness(0) invert(1) sepia(21%) saturate(115%) hue-rotate(105deg) brightness(106%) contrast(90%);
+    opacity: 100%;
+    transition: all 0.5s;
+}
+
+.Heading-partner {
+    font-family: var(--secondary-font);
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.keahlianCard1,
+.keahlianCard2,
+.keahlianCard3,
+.keahlianCard4,
+.keahlianCard5 {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 100px;
+    transition: transform 0.25s, border-color 0.25s;
+    padding: 1.25rem;
+}
+
+.keahlianCard1:hover,
+.keahlianCard2:hover,
+.keahlianCard3:hover,
+.keahlianCard4:hover,
+.keahlianCard5:hover {
+    transform: translateY(-10px);
+    border-color: var(--text-color);
+    box-shadow: 0 10px 15px rgba(22, 67, 64, 0.35);
+}
+
+.keahlianCard1::before,
+.keahlianCard2::before,
+.keahlianCard3::before,
+.keahlianCard4::before,
+.keahlianCard5::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--bg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 100px;
+}
+
+.keahlianCard1::before {
+    opacity: 0.5;
+}
+
+.keahlianCard2::before {
+    opacity: 0.4;
+}
+
+.keahlianCard3::before {
+    opacity: 0.3;
+}
+
+.keahlianCard4::before {
+    opacity: 0.2;
+}
+
+.keahlianCard5::before {
+    opacity: 0.1;
+}
+
+.cover-keahlian {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 1;
+    transition: opacity 0.25s, transform 0.25s;
+}
+
+.CardKonten-heading {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.konten-keahlian {
+    position: absolute;
+    inset: 0;
+    padding: 1.25rem;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.25s, transform 0.25s;
+    pointer-events: none;
+    color: var(--text-color);
+    font-family: var(--body-font);
+    font-weight: 500;
+}
+
+.keahliancard1:hover .konten-keahlian,
+.keahlianCard2:hover .konten-keahlian,
+.keahlianCard3:hover .konten-keahlian,
+.keahlianCard4:hover .konten-keahlian,
+.keahlianCard5:hover .konten-keahlian {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.keahlianCard2:hover .cover-keahlian,
+.keahlianCard3:hover .cover-keahlian,
+.keahlianCard4:hover .cover-keahlian,
+.keahlianCard5:hover .cover-keahlian {
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+}
+
+.parallax-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130%;
+    height: 100px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+.testimonials-cards{
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 100px;
+    transition: transform 0.25s, border-color 0.25s;
+    padding: 1.25rem;
+    background-repeat: no-repeat;
+}
+.testimonials-content{
+    position: absolute;
+    inset: 0;
+    padding: 1.25rem;
+    color: var(--text-color);
+    font-family: var(--body-font);
+}
+.swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+    .cover-keahlian {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .konten-keahlian {
+        position: static;
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+        padding: 0;
+        margin-top: 12px;
+        border-top: 1px solid #e5e7eb;
+        padding-top: 12px;
+    }
+
+    .keahlianCard1:hover,
+    .keahlianCard2:hover,
+    .keahlianCard3:hover,
+    .keahlianCard4:hover,
+    .keahlianCard5:hover {
+        transform: none;
+        border-color: #e5e7eb;
+    }
+
+    .keahlianCard1:hover .cover-keahlian,
+    .keahlianCard2:hover .cover-keahlian,
+    .keahlianCard3:hover .cover-keahlian,
+    .keahlianCard4:hover .cover-keahlian,
+    .keahlianCard5:hover .cover-keahlian {
+        opacity: 1;
+        transform: none;
+    }
+}
