@@ -28,8 +28,8 @@
             <a href="{{ url('Lamaran') }}"><li><i class="bi bi-send"></i>Lamaranku</li></a>
             <a href="{{ url('Proyek') }}"><li><i class="bi bi-suitcase-lg"></i>Proyek Aktif</li></a>
             <a href="{{ url('Portofolio') }}"><li><i class="bi bi-folder2-open"></i>Portofolio</li></a>
-            <li><i class="fa-solid fa-medal"></i>Lencana</li>
-            <li><i class="fa-regular fa-user"></i>Ubah Profil</li>
+            <a href="{{ url('Lencana') }}"><li><i class="fa-solid fa-medal"></i>Lencana</li></a>
+            <a href="{{ url('UbahProfil') }}"><li><i class="fa-regular fa-user"></i>Ubah Profil</li></a>
         </ul>
     </div>
 

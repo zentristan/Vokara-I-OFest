@@ -51,3 +51,11 @@ Route::get('/Proyek', function () {
 Route::get('/Portofolio', function () {
     return view('Portofolio_Siswa.portofolio_siswa');
 });
+
+Route::get('/Lencana', function () {
+    return view('Lencana_Siswa.lencana_siswa');
+});
+
+Route::get('/UbahProfil', function () {
+    return view('Ubah_Profil_Siswa.ubah_profil_siswa');
+});
