@@ -72,18 +72,13 @@
 
             <div class="col card-mp p-0">
                 <img class="card-img-mp" src="{{ asset("images/card_image.jpg") }}">
-                <span class="job-title-mp">Pemula</span>
-                <div class="card-bottom-mp d-flex p-4 justify-content-between">
-                    <div class="d-flex">
-                        <img class="avatar avatar-sm rounded-circle" src="{{ asset("tes") }}">
+                <span class="card-tag-mp outfit text-color"><img class="me-1" width="15" height="15" src="{{ asset("images/tag-solid.png") }}">Web Development</span>
+                <div class="card-bottom-mp d-flex">
+                        <img class="avatar avatar-sm rounded-circle" src="{{ asset("images/background.png") }}">
                         <div class="d-flex flex-column">
                             <p class="card-name-mp outfit text-color mb-0">Nama Siswa</p>
                             <p class="card-subname-mp outfit mb-0">Keahlian – Asal Sekolah</p>
                         </div>
-                    </div>
-                    <span class="card-kelas-mp text-color mt-1 kelas-10 outfit">
-                        Kelas 10
-                    </span>
                 </div>
             </div>
         </div>
