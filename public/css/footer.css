@@ -1,0 +1,66 @@
+:root {
+    --primary-color: #1D9E75;
+    --accent-color: #5DCAA5;
+    --highlight-color: #EF9F27;
+    --card-color: #0F2D2B;
+    --background-color: #0E1A1F;
+    --text-color: #e0f2ec;
+}
+.footer {
+    margin-top: 80px;
+    padding: 40px 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);;
+    border-top: 1px solid var(--text-color);
+}
+.footer-left img{
+    margin-left: 20px;
+}
+.footer-left p {
+    align-items: center;
+    gap: 20px;
+    font-family: "Outfit", sans-serif;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    margin-top: -10px;
+}
+.footer-links {
+    display: flex;
+    gap: 160px;
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-right: 40px;
+}
+.footer-links p{
+    color: gray;
+    margin-top: 15px;
+}
+.footer-links h4 {
+    font-family: "Outfit", sans-serif;
+    font-size: 20px;
+}
+.map{
+    background-color: var(--text-color);
+    height: 200px;
+    border-radius: 20px;
+    width: 15%;
+    color: black;
+    text-align: center;
+    margin-left: 160px;
+}
+.map p{
+    margin-top: 90px;
+    font-weight: bold;
+}
+.copyright {
+    font-family: "Outfit", sans-serif;
+    border-top: 1px solid var(--text-color);
+    width: 100%;
+    background-color: var(--background-color);
+    height: 75px;
+}
+.copyright p {
+    text-align: center;
+    margin-top: 25px;
+    color: var(--text-color);
+}

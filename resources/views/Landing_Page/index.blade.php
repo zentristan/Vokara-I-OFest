@@ -42,8 +42,8 @@
                     </a>
                 </div>
                 <div class="nav-menu d-flex">
-                    <a href="#" class="nav-link">Temukan Talenta </a>
-                    <a href="#" class="nav-link">Temukan Proyek</a>
+                    <a href="/PasarJasa" class="nav-link">Temukan Talenta</a>
+                    <a href="/LowonganJasa" class="nav-link">Temukan Proyek</a>
                 </div>
                 <div class="nav-button d-flex">
                     <a href="#" class="btn-primary">Daftar Gratis</a>
@@ -66,8 +66,8 @@
                             <h1 class="HeroTagline-Text"><span id="typed-text"></span></h1>
                             <p class="HeroDescription-Text">“Platform untuk siswa SMK mengerjakan project real dari klien & membangun portofolio profesional”</p>
                             <div class="d-flex justify-content-center gap-3 mt-4">
-                                <a href="#" class="btn-primary fs-5 fw-light ">Jelajahi Jasa</a>
-                                <a href="#" class="btn-secondary fs-5 fw-light ">Cari Talenta</a>
+                                <a href="/PasarJasa" class="btn-primary fs-5 fw-light ">Temukan Talenta</a>
+                                <a href="/LowonganJasa" class="btn-secondary fs-5 fw-light ">Temukan Proyek</a>
                             </div>
                         </div>
                     </div>
