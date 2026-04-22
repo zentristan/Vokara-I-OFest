@@ -79,7 +79,6 @@ body {
     border: 2px solid var(--card-color);
     color: var(--text-color);
     backdrop-filter: blur(6px);
-    
 }
 .search-box-mp {
     display: flex;
@@ -162,6 +161,7 @@ body {
     width: 350px;
     position: relative;
     transition: 0.2s;
+    cursor: pointer;
 }
 .card-img-mp {
     width: 100%;
