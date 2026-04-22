@@ -28,12 +28,32 @@ Route::get('/Sidebar', function () {
     return view('components.sidebar');
 });
 
+Route::get('/Sidebar_Mentor', function () {
+    return view('components.sidebar_mentor');
+});
+
 Route::get('/Navbarno', function () {
     return view('components.navbar_templateno');
 });
 
 Route::get('/Navbar', function () {
     return view('components.navbar_template');
+});
+
+Route::get('/Dashboard_Mentor', function () {
+    return view('Dashboard_Mentor.dashboard_mentor');
+})->name('Dashboard_Mentor');
+
+Route::get('/Daftar_Siswa', function () {
+    return view('Daftar_Siswa.daftar_siswa');
+})->name('Siswa');
+
+Route::get('/UbahGuru', function () {
+    return view('Ubah_Guru.ubah_guru');
+})->name('UbahGuru');
+
+Route::get('/Landing_Page', function () {
+    return view('Landing_Page/index');
 });
 
 Route::get('/Dashboard', function () {
@@ -47,6 +67,10 @@ Route::get('/LandingPage', function () {
 Route::get('/Lamaran', function () {
     return view('Lamaran_Siswa.lamaran_siswa');
 })->name('Lamaran');
+
+Route::get('/Orderan', function () {
+    return view('Orderan_Siswa.orderan_siswa');
+})->name('Orderan');
 
 Route::get('/Proyek', function () {
     return view('Proyek_Siswa.proyek_siswa');

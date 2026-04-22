@@ -47,32 +47,13 @@
         font-size: 14px;
         margin: 0;
     }
-    .card-siswa button {
-        background-color: transparent;
-        border: var(--border-color);
-        color: rgba(255, 255, 255, 0.60);
-        padding: 12px 25px;
-        margin-top: 15px;
-        width: fit-content;
-        border-radius: 12px;
-        font-family: "Plus Jakarta Sans", sans-serif;
-        font-size: 14px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        transition: 0.2s;
-    }
-    .card-siswa button:hover {
-        background-color: var(--primary-color);
-        color: white;
-        border-color: var(--primary-color);
-    }
     .siswa-title {
         display: flex;
         align-items: center;
         gap: 10px;
-        margin-bottom: 30px;
+        margin-bottom: 30px;  
+        position: relative;
+
     }
     .siswa-title i {
         color: var(--text-color);
@@ -84,21 +65,6 @@
         font-size: 18px;
         font-weight: bold;
         margin: 0;
-    }
-
-    .siswa-title {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    position: relative;
-    }
-
-    .siswa-count {
-        margin-left: auto;
-        color: var(--accent-color);
-        font-family: "Plus Jakarta Sans", sans-serif;
-        font-size: 13px;
     }
 
     .card-siswa-grid {

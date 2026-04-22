@@ -30,6 +30,7 @@
         <ul>
             <a href="{{ url('Dashboard') }}"><li class="{{ $route == 'Dashboard' ? 'active' : '' }}"><i class="bi bi-columns-gap"></i>Overview</li></a>
             <a href="{{ url('Lamaran') }}"><li class="{{ $route == 'Lamaran' ? 'active' : '' }}"><i class="bi bi-send"></i>Lamaranku</li></a>
+            <a href="{{ url('Orderan') }}"><li class="{{ $route == 'Orderan' ? 'active' : '' }}"><i class="bi bi-cart"></i>Orderan</li></a>
             <a href="{{ url('Proyek') }}"><li class="{{ $route == 'Proyek' ? 'active' : '' }}"><i class="bi bi-suitcase-lg"></i>Proyek Aktif</li></a>
             <a href="{{ url('Portofolio') }}"><li class="{{ $route == 'Portofolio' ? 'active' : '' }}"><i class="bi bi-folder2-open"></i>Portofolio</li></a>
             <a href="{{ url('Lencana') }}"><li class="{{ $route == 'Lencana' ? 'active' : '' }}"><i class="fa-solid fa-medal"></i>Lencana</li></a>
