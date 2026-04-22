@@ -13,9 +13,6 @@ Route::get('/LowonganJasa', function () {
     return view('Lowongan_Jasa.lowonganjasa');
 });
 
-Route::get('/LowonganJasaNo', function () {
-    return view('Lowongan_Jasa.lowonganjasano');
-});
 
 Route::get('/PasarJasa', function () {
     return view('Pasar_Jasa.pasarjasa');
@@ -23,10 +20,6 @@ Route::get('/PasarJasa', function () {
 
 Route::get('/Sidebar', function () {
     return view('components.sidebar');
-});
-
-Route::get('/Navbarno', function () {
-    return view('components.navbar_templateno');
 });
 
 Route::get('/Navbar', function () {

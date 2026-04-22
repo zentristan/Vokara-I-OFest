@@ -5,6 +5,7 @@
     --card-color: #0F2D2B;
     --background-color: #0E1A1F;
     --text-color: #e0f2ec;
+    --border-color : 2px solid #264D44;
 }
 .profile-form {
     display: flex;
@@ -36,7 +37,7 @@
 }
 .form-input {
     background-color: rgba(217, 217, 217, 0.55);
-    border: 2px solid var(--accent-color);
+    border: var(--border-color);
     border-radius: 8px;
     padding: 10px 14px;
     color: var(--text-color);
@@ -51,7 +52,7 @@
     color: rgba(54, 54, 54, 0.712);
 }
 .form-input:focus {
-    border-color: var(--accent-color);
+    border-color: var(--border-color);
     background-color: rgba(93, 202, 165, 0.28);
 }
 .form-textarea {
@@ -64,7 +65,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: rgba(93, 202, 165, 0.2);
-    border: 1.5px solid rgba(93, 202, 165, 0.4);
+    border: var(--border-color);
     border-radius: 8px;
     padding: 12px 14px;
 }
@@ -127,7 +128,7 @@
     align-items: center;
     gap: 8px;
     background-color:rgba(45, 45, 45, 0.404) ;
-    border: 2px solid var(--accent-color);
+    border: var(--border-color);
     border-radius: 8px;
     padding: 10px 20px;
     color: var(--text-color);
