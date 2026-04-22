@@ -9,6 +9,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/LandingPage', function () {
+    return view('Landing_Page/index');
+});
+
+Route::get('/Register', function () {
+    return view('Register_Page/register');
+});
+
 Route::get('/LowonganJasa', function () {
     return view('Lowongan_Jasa.lowonganjasa');
 });

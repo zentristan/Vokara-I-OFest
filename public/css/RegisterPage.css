@@ -1,0 +1,25 @@
+:root {
+    --background-color: #0E1A1F;
+    --card-color: #0F2D2B;
+    --primary-color: #1D9E75;
+    --accent-color: #5DCAA5;
+    --highlight-color: #EF9F27;
+    --text-color: #E0F2EC;
+
+    --body-font: "Plus Jakarta Sans", sans-serif;
+    --secondary-font: "Outfit", sans-serif;
+    --accent-font: "Cormorant Garamond", serif;
+}
+
+body {
+    background: #0F2D2B;
+    background: linear-gradient(0deg, rgba(15, 45, 43, 1) 1%, rgba(20, 117, 86, 1) 100%);
+    width: 100%;
+}
+.page-choosing-category{
+    background-color: var(--card-color);
+}
+.logo-image-single {
+    width: auto;
+    height: 80px;
+}
