@@ -1,3 +1,7 @@
+@php
+    $route = request()->route()->getName();
+@endphp
+
 <section class="sidebar">
     <div class="sidebar-header">
         <img src="{{ asset('images/VokaraLight.png') }}" alt="Logo Vokara" width="110" height="50">
@@ -24,18 +28,18 @@
 
     <div class="sidebar-nav">
         <ul>
-            <a href="{{ url('Dashboard') }}"><li><i class="bi bi-columns-gap"></i>Overview</li></a>
-            <a href="{{ url('Lamaran') }}"><li><i class="bi bi-send"></i>Lamaranku</li></a>
-            <a href="{{ url('Proyek') }}"><li><i class="bi bi-suitcase-lg"></i>Proyek Aktif</li></a>
-            <a href="{{ url('Portofolio') }}"><li><i class="bi bi-folder2-open"></i>Portofolio</li></a>
-            <a href="{{ url('Lencana') }}"><li><i class="fa-solid fa-medal"></i>Lencana</li></a>
-            <a href="{{ url('UbahProfil') }}"><li><i class="fa-regular fa-user"></i>Ubah Profil</li></a>
+            <a href="{{ url('Dashboard') }}"><li class="{{ $route == 'Dashboard' ? 'active' : '' }}"><i class="bi bi-columns-gap"></i>Overview</li></a>
+            <a href="{{ url('Lamaran') }}"><li class="{{ $route == 'Lamaran' ? 'active' : '' }}"><i class="bi bi-send"></i>Lamaranku</li></a>
+            <a href="{{ url('Proyek') }}"><li class="{{ $route == 'Proyek' ? 'active' : '' }}"><i class="bi bi-suitcase-lg"></i>Proyek Aktif</li></a>
+            <a href="{{ url('Portofolio') }}"><li class="{{ $route == 'Portofolio' ? 'active' : '' }}"><i class="bi bi-folder2-open"></i>Portofolio</li></a>
+            <a href="{{ url('Lencana') }}"><li class="{{ $route == 'Lencana' ? 'active' : '' }}"><i class="fa-solid fa-medal"></i>Lencana</li></a>
+            <a href="{{ url('UbahProfil') }}"><li class="{{ $route == 'UbahProfil' ? 'active' : '' }}"><i class="fa-regular fa-user"></i>Ubah Profil</li></a>
         </ul>
     </div>
 
     <div class="sidebar-bottom">
         <ul>
-            <li><i class="bi bi-rocket-takeoff"></i>Browse Proyek</li>
+            <a href="{{ url('LowonganJasa') }}"><li><i class="bi bi-rocket-takeoff"></i>Browse Proyek</li></a>  
             <li><i class="bi bi-box-arrow-right"></i>Keluar</li>
         </ul>
     </div>
