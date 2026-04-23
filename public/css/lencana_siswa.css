@@ -1,0 +1,88 @@
+:root {
+    --primary-color: #1D9E75;
+    --accent-color: #5DCAA5;
+    --highlight-color: #EF9F27;
+    --card-color: #0F2D2B;
+    --background-color: #0E1A1F;
+    --text-color: #e0f2ec;
+    --border-color : 2px solid #264D44;
+}
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+.main-content {
+    padding: 40px;
+    min-height: 100vh;
+    margin: 0 auto;
+    margin-left: 300px;
+
+}
+.lencana-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+.lencana-header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-color);
+    font-family: 'Cormorrant Garamond', serif;
+}
+.lencana-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.lencana-card {
+    background-color: rgba(29, 158, 117, 0.35);
+    border: var(--border-color);
+    border-radius: 12px;
+    padding: 18px 24px;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 16px;      
+    transition: border-color 0.2s ease;
+    width: 1100px;
+    height: auto;  
+}
+.badge-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: calc(33.33% - 12px);
+}
+.badge-card {
+    background-color: var(--card-color);
+    border: var(--border-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32%;
+    height: 250px;
+    position: relative; 
+}
+.lencana-profil {
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    background-color: var(--text-color);
+    position: absolute; 
+    top: 12px;          
+    right: 12px;
+}
+.badge-wrapper .badge-card p{
+    color: var(--text-color);
+    font-weight: bold;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    text-align: center;
+}
+.badge-wrapper p{
+    color: gray;
+}
+.badge-card {
+    width: 100%;
+}
