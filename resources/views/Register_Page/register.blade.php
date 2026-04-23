@@ -43,35 +43,65 @@
                 </div>
                 <div class="form-choose-section flex-col justify-center">
                     <div class="grid grid-cols-1">
-                        <form method="POST">
-                            <input type="hidden" name="role" id="selected-role">
-                            <div class="role-category-card selected w-full gap-5 flex justify-between items-center">
-                                <div class="w-90">
-                                    <i class="fa-solid fa-graduation-cap mb-3" style="color: rgb(224, 242, 236); font-size: 3rem;"></i>
-                                    <h4 class="header-card">Saya Talenta, <span class="description-card">Ingin Menambahkan Portfolio</span></h4>
-                                </div>
-                                <i class="fa-regular fa-circle-dot" style="color: rgb(224, 242, 236); font-size: 1.5rem;"></i>
+                        <div class="role-category-card w-full gap-5 flex justify-between items-center" data-role="talenta" onclick="selectRole(this)">
+                            <div class="w-90">
+                                <i class="fa-solid fa-graduation-cap mb-3" style="color: rgb(224, 242, 236); font-size: 3rem;"></i>
+                                <h4 class="header-card">Saya Talenta, <span class="description-card">Ingin Menambahkan Portfolio</span></h4>
                             </div>
-                            <div class="role-category-card w-full gap-5 flex justify-between items-center">
-                                <div>
-                                    <i class="fa-solid fa-briefcase mb-3" style="color: rgb(224, 242, 236); font-size: 3rem;"></i>
-                                    <h4 class="header-card">Saya Klien, <span class="description-card">Ingin Menawarkan Jasa Ke Talenta</span></h4>
-                                </div>
-                                <i class="fa-regular fa-circle-dot" style="color: rgb(224, 242, 236); font-size: 1.5rem;"></i>
+                            <i class="radio-icon fa-regular fa-circle-dot" style="color: rgb(224, 242, 236); font-size: 1.5rem;"></i>
+                        </div>
+                        <div class="role-category-card w-full gap-5 flex justify-between items-center" data-role="klien" onclick="selectRole(this)">
+                            <div>
+                                <i class="fa-solid fa-briefcase mb-3" style="color: rgb(224, 242, 236); font-size: 3rem;"></i>
+                                <h4 class="header-card">Saya Klien, <span class="description-card">Ingin Mencari Jasa Untuk Di Pekerjakan</span></h4>
                             </div>
-                            <div class="role-category-card w-full gap-5 flex justify-between items-center">
-                                <div>
-                                    <i class="fa-solid fa-book-open mb-3" style="color: rgb(224, 242, 236); font-size: 3rem;"></i>
-                                    <h4 class="header-card">Saya Mentor, <span class="description-card">Ingin Mendampingi Talenta</span></h4>
-                                </div>
-                                <i class="fa-regular fa-circle-dot" style="color: rgb(224, 242, 236); font-size: 1.5rem;"></i>
+                            <i class="radio-icon fa-regular fa-circle-dot" style="color: rgb(224, 242, 236); font-size: 1.5rem;"></i>
+                        </div>
+                        <div class="role-category-card w-full gap-5 flex justify-between items-center" data-role="mentor" onclick="selectRole(this)">
+                            <div>
+                                <i class="fa-solid fa-book-open mb-3" style="color: rgb(224, 242, 236); font-size: 3rem;"></i>
+                                <h4 class="header-card">Saya Mentor, <span class="description-card">Ingin Mendampingi Talenta</span></h4>
                             </div>
-                        </form>
+                            <i class="radio-icon fa-regular fa-circle-dot" style="color: rgb(224, 242, 236); font-size: 1.5rem;"></i>
+                        </div>
+                        <button type="submit" id="btn-pilih" class="daftar-submit-button w-full my-5 disabled" onclick="proceed()">Pilih</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <script src="{{ asset('js/LandingPage.js') }}"></script>
+    <script>
+        let selectedRole = null;
+
+        function selectRole(card) {
+            document.querySelectorAll('.role-category-card').forEach(c => {
+                c.classList.remove('selected');
+                const icon = c.querySelector('.radio-icon');
+                icon.classList.remove('fa-solid');
+                icon.classList.add('fa-regular');
+            });
+
+            card.classList.add('selected');
+            const selectedIcon = card.querySelector('.radio-icon');
+            selectedIcon.classList.remove('fa-regular');
+            selectedIcon.classList.add('fa-solid');
+
+            selectedRole = card.dataset.role;
+            document.getElementById('btn-pilih').classList.remove('disabled');
+        }
+
+        function proceed() {
+            if (!selectedRole) return;
+
+            const routes = {
+                talenta: "{{ route('register.talenta')}}",
+                klien: "{{ route('register.klien')}}",
+                mentor: "{{ route('register.mentor')}}",
+            };
+            window.location.href = routes[selectedRole] + '?role=' + selectedRole;
+        }
+    </script>
+    <script src="{{ asset('js/RegisterPage.js') }}"></script>
 </body>
+
 </html>

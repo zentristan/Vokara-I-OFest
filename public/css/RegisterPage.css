@@ -53,10 +53,38 @@ body {
     background-color: var(--card-color);
     transition: all 0.5s;
 }
+.role-category-card.selected {
+    border: 1px solid white;
+    background-color: #184A47;
+    box-shadow: 0 -10px 40px rgba(29, 158, 117, 0.2);
+}
+.role-category-card.selected .radio-icon::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f192"; 
+}
+.daftar-submit-button.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+.daftar-submit-button:not(.disabled) {
+    opacity: 1;
+    pointer-events: auto;
+}
 .role-category-card:hover{
     transform: translateY(-2px);
     box-shadow: 0 -10px 40px rgba(29, 158, 117, 0.2);
 }
 .password-container{
     position: relative;
+}
+.daftar-submit-button{
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border-radius: 30px;
+    font-weight: 700;
+    font-family: var(--body-font);
+    padding: 5px 20px;
+    transition: all 0.5s;
+    font-size: 1.5rem;
 }
