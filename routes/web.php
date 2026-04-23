@@ -28,12 +28,27 @@ Route::get('/LandingPage', function () {
     return view('Landing_Page/index');
 });
 
+
+
 Route::get('/Register', function () {
     return view('Register_Page/register');
 });
 Route::get('/Login', function () {
     return view('Register_Page/login');
+})-> name('login');
+
+Route::get('/Register-Talenta', function () {
+    return view('Register_Page/register-talenta');
 });
+Route::get('/Register-Klien', function () {
+    return view('Register_Page/register-klien');
+});
+Route::get('/Register-Mentor', function () {
+    return view('Register_Page/register-mentor');
+});
+
+
+
 
 Route::get('/LowonganJasa', function () {
     return view('Lowongan_Jasa.lowonganjasa');

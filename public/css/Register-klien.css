@@ -22,13 +22,24 @@ input[type="checkbox"]{
     accent-color: var(--accent-color);
     border-radius: 10px;
 }
-.logo-image-single {
-    width: auto;
-    height: 50px;
-}
 ::placeholder{
     color: var(--text-color);
     opacity: 0.8;
+}
+input[type="date"]{
+    color: var(--text-color);
+    
+}
+input[type="date"]::-webkit-datetime-edit{
+    color: var(--text-color);
+    opacity: 0.8;
+}
+input[type="date"]:not([value])::-webkit-datetime-edit{
+    color: var(--text-color);
+}
+.logo-image-single{
+    width: auto;
+    height: 50px;
 }
 .header-choosing-register {
     color: var(--text-color);
@@ -63,31 +74,20 @@ input[type="checkbox"]{
     cursor: pointer;
     color: #888;
 }
-.masuk-submit-button{
+.daftar-submit-button{
     background-color: var(--accent-color);
     color: var(--text-color);
     border-radius: 30px;
     font-weight: 700;
     font-family: var(--body-font);
-    padding: 15px 20px;
+    padding: 10px 20px;
     transition: all 0.5s;
+    font-size: 1.5rem;
 }
-.masuk-submit-button:hover{
+.daftar-submit-button:hover{
     transform: translateY(-3px);
     box-shadow: 0 -10px 40px rgba(29, 158, 117, 0.2);
 }
-.other-way-login-button{
-    background-color: var(--card-color);
-    color: var(--text-color);
-    font-family: var(--body-font);
-    font-weight: 500;
-    font-size: 1rem;
-    padding: 15px 20px;
-    border-radius: 30px;
-    border: 1px solid rgba(29, 158, 117, 0.5);
-    transition: all 0.5s;
-}
-.other-way-login-button:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 -10px 40px rgba(29, 158, 117, 0.2);
+.sign-in-link{
+    color: var(--primary-color);
 }
