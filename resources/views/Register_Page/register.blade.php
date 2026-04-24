@@ -103,5 +103,4 @@
     </script>
     <script src="{{ asset('js/RegisterPage.js') }}"></script>
 </body>
-
 </html>
