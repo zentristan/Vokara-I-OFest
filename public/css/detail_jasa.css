@@ -1,0 +1,61 @@
+:root {
+    --primary-color: #1D9E75;
+    --accent-color: #5DCAA5;
+    --background-color: #0E1A1F;
+    --text-color: #E0F2EC;
+    --text-color-secondary: #808080;
+    --card-color: #0F2D2B;
+    --font-outfit: 'Outfit';
+    --font-jakarta: 'Jakarta Sans';
+    --font-cormorant: 'Cormorant Garamond';
+}
+.text-color {
+    color: var(--text-color);
+}
+.text-color-secondary {
+    color: #808080;
+}
+.bg-color {
+    background-color: var(--background-color);
+}
+.card_color {
+    background-color: var(--card-color);
+}
+.accent-color {
+    color: var(--accent-color);
+}
+.primary-color {
+    color: var(--primary-color);
+}
+.outfit {
+    font-family: 'Outfit', sans-serif;
+}
+.jakarta {
+    font-family: 'Jakarta', sans-serif;
+}
+.cormorant {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.container-info-jasa {
+    width: 1380px;
+    margin: 40px auto;
+    padding: 0;
+}
+.kembali img {
+    margin-top: 2px;
+}
+.info {
+    width: 1050px;
+}
+.button-pesan {
+    width: 300px;
+}
+.jasa {
+    border-radius: 15px;
+    border: 1px solid rgba(29, 158, 117, 0.1);
+}
+.jasa h1 {
+    font-size: 36px;
+    font-weight: 500;
+}

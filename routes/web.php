@@ -24,6 +24,10 @@ Route::get('/PasarJasa', function () {
     return view('Pasar_Jasa.pasarjasa');
 });
 
+Route::get('/infojasa', function () {
+    return view('Pasar_Jasa.detail_jasa');
+});
+
 Route::get('/Sidebar', function () {
     return view('components.sidebar');
 });
