@@ -49,7 +49,6 @@ Route::get('/LandingPage', function () {
 Route::get('/Register', function () {
     return view('Register_Page/register');
 })-> name('register');
-<<<<<<< HEAD
 
 Route::get('/Login', function () {
     return view('Register_Page/login');
@@ -69,8 +68,6 @@ Route::get('/Register-Mentor', function () {
 
 
 
-=======
->>>>>>> 431bd83bcff83e5fa342900a3dbc6db084a594a2
 
 Route::get('/Login', function () {
     return view('Register_Page/login');
