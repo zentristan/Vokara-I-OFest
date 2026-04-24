@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\SiswaController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\talentaController;
 
 Route::resource('/siswas', SiswaController::class);
 
@@ -60,6 +61,7 @@ Route::get('/LowonganJasa', function () {
 Route::get('/PasarJasa', function () {
     return view('Pasar_Jasa.pasarjasa');
 });
-// Route::get('/siswa', function () {
-//     return view('siswas.index');
-// });
+
+// Route::get('/pasarjasa', [talentaController::class, 'index'])->name('Pasar_Jasa.pasarjasa'); 
+// Route::get('/pasarjasa', [talentaController::class, 'index'])->name('Pasar_Jasa.pasarjasa');
+Route::get('/PasarJasa', [talentaController::class, 'index']);
