@@ -72,6 +72,14 @@ Route::get('/Orderan', function () {
     return view('Orderan_Siswa.orderan_siswa');
 })->name('Orderan');
 
+Route::get('/Keterangan', function () {
+    return view('Keterangan_siswa.keterangan_siswa');
+});
+
+Route::get('/Keterangan-Diterima', function () {
+    return view('Keterangan_siswa.keterangan_siswa_diterima');
+});
+
 Route::get('/Proyek', function () {
     return view('Proyek_Siswa.proyek_siswa');
 })->name('Proyek');
