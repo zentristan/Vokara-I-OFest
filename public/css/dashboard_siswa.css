@@ -5,6 +5,7 @@
         --card-color: #0F2D2B;
         --background-color: #0E1A1F;
         --text-color: #e0f2ec;
+        --border-color : 2px solid #264D44;
     }
     ::-webkit-scrollbar {
         display: none;
@@ -14,8 +15,8 @@
         font-family: "Plus Jakarta Sans", sans-serif;
     }
     .kontener {
-    width: calc(100% - 300px); /* sesuaikan dengan lebar sidebar */
-    margin-left: 280px;        /* sama dengan width sidebar */
+    width: calc(100% - 300px); 
+    margin-left: 280px;       
     margin-right: 20px;
     padding: 40px 20px 20px 20px;
     display: flex;
@@ -27,7 +28,7 @@
         background-color: var(--card-color);
         border-radius: 17px;
         padding: 35px;
-        border: 2px solid var(--accent-color);
+        border: var(--border-color);
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -48,7 +49,7 @@
     }
     .card-siswa button {
         background-color: transparent;
-        border: 2px solid var(--accent-color);
+        border: var(--border-color);
         color: rgba(255, 255, 255, 0.60);
         padding: 12px 25px;
         margin-top: 15px;
@@ -77,7 +78,7 @@
         background-color: var(--card-color);
         border-radius: 17px;
         padding: 25px;
-        border: 2px solid var(--accent-color);
+        border: var(--border-color);
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -112,7 +113,7 @@
         background-color: var(--card-color);
         border-radius: 17px;
         padding: 30px 35px;
-        border: 2px solid var(--accent-color);
+        border:var(--border-color);
         width: 100%;
     }
     .perjalanan-title {
@@ -176,7 +177,7 @@
         background-color: var(--card-color);
         border-radius: 17px;
         padding: 20px 25px;
-        border: 2px solid var(--accent-color);
+        border: var(--border-color);
         display: flex;
         align-items: center;
         gap: 20px;

@@ -1,3 +1,13 @@
+::root{
+    --primary-color: #1D9E75;
+    --accent-color: #5DCAA5;
+    --highlight-color: #EF9F27;
+    --card-color: #0F2D2B;
+    --background-color: #0E1A1F;
+    --text-color: #e0f2ec;
+    --border-color : 2px solid #264D44;
+}
+
 .sidebar {
     background-color: var(--card-color);
     width: 260px;
@@ -5,14 +15,13 @@
     border-radius: 0 20px 20px 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* distribusi ruang otomatis */
+    justify-content: space-between;
     position: fixed;
     top: 0;
     left: 0;
-    overflow: hidden; /* no scroll */
+    overflow: hidden;
 }
 
-/* Kurangi padding agar semua muat */
 .sidebar-header {
     padding: 5px 20px;
     border-bottom: 1px solid rgba(255,255,255,0.2);
@@ -143,7 +152,7 @@
     color: white;
     margin-right: 14px;
 }
-.sidebar-nav ul li a,
+
 .sidebar-bottom ul li a {
     text-decoration: none;
     color: inherit;
@@ -155,8 +164,14 @@
 }
 
 .sidebar-nav ul li.active {
-    background-color: #f0f0f0;
-    color: #000;
-    font-weight: 500;
+    background-color: var(--background-color); 
+    color: var(--accent-color);             
+    border-left: 4px solid var(--primary-color);  
     border-radius: 8px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+a{
+    text-decoration: none;
 }

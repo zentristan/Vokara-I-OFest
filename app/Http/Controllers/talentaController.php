@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\kategori;
 
 // nyari path
 use App\Models\talentaJob;
@@ -12,7 +13,7 @@ class talentaController extends Controller
     public function index()
     {
         $talenta = talentaJob::all();
-        return view('Pasar_Jasa.pasarjasa', compact('talenta'));
-        
+        $kategori = kategori::all(); 
+        return view('Pasar_Jasa.pasarjasa', compact('talenta', 'kategori'));
     }
 }

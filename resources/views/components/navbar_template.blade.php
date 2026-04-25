@@ -5,7 +5,7 @@
             </div>
             <nav id="nav-link" class="d-flex">
                 <a href="/PasarJasa">Temukan Talenta</a>
-                <a href="/LowonganJasa">Temukan Proyek</a>
+                <a href="/Lowongan">Temukan Proyek</a>
             </nav>
             <div class="d-flex gap-2">
 

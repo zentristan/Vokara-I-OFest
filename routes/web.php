@@ -2,7 +2,13 @@
 
 use App\Http\Controllers\SiswaController;
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\talentaController;
+use App\Http\Controllers\KlienJobsController;
+
+
+Route::prefix('Dashboard')->group(function () {
+});
 
 Route::resource('/siswas', SiswaController::class);
 
@@ -10,21 +16,34 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/LowonganJasa', function () {
-    return view('Lowongan_Jasa.lowonganjasa');
+// Route::get('/LowonganJasa', function () {
+//     return view('Lowongan_Jasa.lowonganjasa');
+// });
+
+Route::get('/LowonganJasaNo', function () {
+    return view('Lowongan_Jasa.lowonganjasano');
 });
 
 Route::get('/PasarJasa', function () {
     return view('Pasar_Jasa.pasarjasa');
 });
 
-Route::get('/Dashboard', function () {
-    return view('Dashboard_Siswa.dashboard_siswa');
+Route::get('/Sidebar', function () {
+    return view('components.sidebar');
 });
 
-Route::get('/Lamaran', function () {
-    return view('Lamaran_Siswa.lamaran_siswa');
+Route::get('/Navbarno', function () {
+    return view('components.navbar_templateno');
 });
+
+Route::get('/Navbar', function () {
+    return view('components.navbar_template');
+});
+
+Route::get('/Dashboard', function () {
+    return view('Dashboard_Siswa.dashboard_siswa');
+})->name('Dashboard');
+
 Route::get('/LandingPage', function () {
     return view('Landing_Page/index');
 });
@@ -54,14 +73,21 @@ Route::get('/Register-Mentor', function () {
 
 
 
-Route::get('/LowonganJasa', function () {
-    return view('Lowongan_Jasa.lowonganjasa');
-});
+Route::get('/Login', function () {
+    return view('Register_Page/login');
+})-> name('login');
+
+Route::get('/PenambahanTalenta', function () {
+    return view('Penambahan_Talenta/penambahan-talenta');
+})-> name('login');
 
 Route::get('/PasarJasa', function () {
     return view('Pasar_Jasa.pasarjasa');
 });
 
-// Route::get('/pasarjasa', [talentaController::class, 'index'])->name('Pasar_Jasa.pasarjasa'); 
-// Route::get('/pasarjasa', [talentaController::class, 'index'])->name('Pasar_Jasa.pasarjasa');
-Route::get('/PasarJasa', [talentaController::class, 'index']);
+
+Route::get('/PasarJasa', [talentaController::class, 'index', 'ambilKategori']);
+
+Route::get('/Lowongan', [KlienJobsController::class, 'index', 'ambilKategori']);
+
+// Route::get('/PasarJasa', [talentaController::class, 'kateg']);

@@ -38,16 +38,14 @@
 
 <x-layout>
 
-    <body>
         <section class="hero-mp">
-
             <div class="hero-2">
                 <div class="hero-top">
                     <h1 class="hero-title">Temukan Talenta</h1>
                 </div>
                 <h3 class="hero-subtitle">0 Jasa Ditemukan dari Siswa SMK</h3>
 
-                <div class="search-box-mp">
+                <div class="search-box-tp">
                     <input type="text" placeholder="Cari Jasa, Kategori...">
                     {{-- <button class="search-filter d-flex"><img src="{{ asset(" images/sliders-solid.png") }}"
                     width="25" height="25">
@@ -61,17 +59,7 @@
         </section>
 
         <section class="content-mp">
-            <aside class="sidebar-mp">
-                <h3>Kategori</h3>
-                <ul>
-                    <li class="outfit active">Semua</li>
-                    <li class="outfit ">Desain Grafis</li>
-                    <li class="outfit ">Web Development</li>
-                    <li class="outfit ">Video Editing</li>
-                    <li class="outfit ">Animasi</li>
-                    <li class="outfit ">Fotografi</li>
-                </ul>
-            </aside>
+            <x-kategori-side-bar :kategori="$kategori" />
 
             <div class="jobs-mp row row-cols-lg-3 gap-3">
                 @foreach($talenta as $dataTalenta)
@@ -100,7 +88,7 @@
                                 </div>
                             </div>
                             <div class="harga d-flex flex-column mt-2">
-                                <p class="harga-title outfit">Mulai dari</p>
+                                <p class="harga-title outfit text-end">Mulai dari</p>
                                 <p class="harga-angka outfit">Rp 100.000</p>
                             </div>
                         </div>
@@ -109,7 +97,6 @@
                 @endforeach
             </div>
         </section>
-        </div>
 
 </x-layout>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
