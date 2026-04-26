@@ -26,6 +26,9 @@
     background-color: var(--card-color);
 }
 
+.bg_primary {
+    background-color: var(--primary-color);
+}
 .accent-color {
     color: var(--accent-color);
 }
@@ -176,7 +179,8 @@
 
 
 .overlay.active,
-.popup.active {
+.popup.active,
+.popup-sukses.active {
     display: block;
 }
 .popup button {
@@ -221,4 +225,41 @@
 }
 b {
     color: #EF9F27;
+}
+
+.popup-sukses {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background: var(--background-color);
+    border: 1px solid rgba(29, 158, 117, 0.1);
+    border-radius: 15px;
+    z-index: 201;
+    width: 500px;
+    transform: translate(-50%, -50%);
+    padding: 40px 30px;
+}
+.logo {
+    width: 110px;
+    height: 110px;
+}
+.logo img {
+    margin: 15px 0 0 15px;
+}
+.popup-sukses a {
+    background-color: var(--primary-color);
+    border: 1px solid rgba(29, 158, 117, 0.1);
+    width: 30%;
+    font-weight: 500;
+}
+.popup-sukses a:active,
+.popup-sukses a:hover,
+.popup-sukses a:focus {
+    background-color: var(--primary-color) !important;
+    outline: none !important;
+    color: var(--text-color) !important;
+}
+.cursor-pointer {
+    cursor: pointer;
 }
