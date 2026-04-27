@@ -46,11 +46,13 @@
         <div class="d-flex mt-4 justify-content-between ">
             <div class="info d-flex flex-column gap-4">
                 <div class="jasa card_color">
-                    <h1 class="text-color text-wrap">Nama Jasa Talenta</h1>
+                    <h1 class="text-color text-wrap">{{$detailTalenta->nama}}</h1>
                     <div class="d-flex px-4 gap-3">
                         <div class="rating-detail d-flex gap-1">
+
+
                             <img width="20" height="20"  src="{{ asset("images/star-solid.png") }}">
-                            <p class="fw-bold p-0">5.0</p>
+                            <p class="fw-bold p-0">{{$detailTalenta->rating}}</p>
                         </div>
                         <div class="deadline-detail d-flex gap-1">
                             <img width="20" height="20" src="{{ asset("images/clock-regular.png") }}">
@@ -59,10 +61,7 @@
                     </div>
                     <hr class="mt-0">
                     <h2 class="px-4 text-color">Deskripsi Jasa</h2>
-                    <p class="px-4 mb-0 text-color">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis deleniti ex unde! Consequuntur
-                        quis dolores in! Earum tenetur facere soluta eum perferendis placeat temporibus repellendus ab
-                        necessitatibus natus voluptate, exercitationem hic? Nisi ipsa quam, ut alias sequi voluptates
-                        atque nam facilis amet obcaecati autem, voluptatibus iusto sunt modi. Debitis, officiis!</p>
+                    <p class="px-4 mb-0 text-color">{{$detailTalenta->deskripsi}}</p>
                 </div>
 
                 <div class="talenta p-4 card_color">
@@ -70,8 +69,8 @@
                     <div class="d-flex">
                         <img class="rounded-circle" width="60" height="60" src="{{ asset("images/background.png") }}">
                         <div class="ms-2 d-flex flex-column">
-                            <p class="text-color fs-5 mb-0">Budiono Siregar Putra Kapal Lawd</p>
-                            <p class="text-color-secondary mb-1">Keahlian – Asal Sekolah</p>
+                            <p class="text-color fs-5 mb-0">{{$detailTalenta->nama}}</p>
+                            <p class="text-color-secondary mb-1">{{$detailTalenta->jurusan}} – {{$detailTalenta->sekolah}}</p>
                             <button id="button-talenta" class="btn d-flex gap-1 p-1">
                                 <img width="20" height="20" src="{{ asset("images/user-regular.png") }}">
                                 <p class="text-color m-0">Lihat Profil</p>
@@ -100,7 +99,7 @@
             </div>
             <div class="button-pesan card_color p-4">
                 <h2 class="text-color m-0">Harga mulai dari</h2>
-                <p class="accent-color fw-bold fs-1">20.000.000</p>
+                <p class="accent-color fw-bold fs-1">Rp{{number_format($detailTalenta->harga, 0, ',', '.')}}</p>
                 <button onclick="bukaPopup()" class="btn text-color fs-5 outfit">Pesan Sekarang</button>
             </div>
         </div>

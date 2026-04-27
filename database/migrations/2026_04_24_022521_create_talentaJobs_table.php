@@ -20,7 +20,8 @@ return new class extends Migration
             $table->string('image');
             $table->string('harga');
             $table->integer('rating');
-
+            $table->integer('id_kategori');
+        
             $table->timestamps();
         });
     }

@@ -13,6 +13,12 @@ class talentaJob extends Model
         'deskripsi',
         'image',
         'harga',
-        'rating'
+        'rating',
+        'id_kategori',
     ];
+
+    public function kategori()
+    {
+        return $this->belongsTo(kategori::class, 'id_kategori');
+    }
 }

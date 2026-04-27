@@ -16,4 +16,22 @@ class talentaController extends Controller
         $kategori = kategori::all(); 
         return view('Pasar_Jasa.pasarjasa', compact('talenta', 'kategori'));
     }
+
+    public function show($id)
+    {
+        $detailTalenta = talentaJob::findOrFail($id);
+        $kategori = kategori::all();
+
+
+        return view('Pasar_Jasa.detail_jasa', compact('detailTalenta', 'kategori'));
+    }
+
+    public function filterbyKategori($id)
+    {
+        $talenta = talentaJob::where('id_kategori', $id)->get();
+        $kategori = kategori::all();
+
+
+        return view('Pasar_Jasa.pasarjasa', compact('talenta', 'kategori'));  
+    }
 }
