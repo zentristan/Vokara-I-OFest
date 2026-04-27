@@ -24,8 +24,8 @@ Route::get('/PasarJasa', function () {
     return view('Pasar_Jasa.pasarjasa');
 });
 
-Route::get('/Sidebar', function () {
-    return view('components.sidebar');
+Route::get('/Sidebar_Mentor', function () {
+    return view('components.sidebar_mentor');
 });
 
 Route::get('/Navbarno', function () {
@@ -36,6 +36,22 @@ Route::get('/Navbar', function () {
     return view('components.navbar_template');
 });
 
+Route::get('/Dashboard_Mentor', function () {
+    return view('Dashboard_Mentor.dashboard_mentor');
+})->name('Dashboard_Mentor');
+
+Route::get('/Daftar_Siswa', function () {
+    return view('Daftar_Siswa.daftar_siswa');
+})->name('Siswa');
+
+Route::get('/UbahGuru', function () {
+    return view('Ubah_Guru.ubah_guru');
+})->name('UbahGuru');
+
+Route::get('/Landing_Page', function () {
+    return view('Landing_Page/index');
+});
+
 Route::get('/Dashboard', function () {
     return view('Dashboard_Siswa.dashboard_siswa');
 })->name('Dashboard');
@@ -44,30 +60,21 @@ Route::get('/LandingPage', function () {
     return view('Landing_Page/index');
 });
 
+Route::get('/Lamaran', function () {
+    return view('Lamaran_Siswa.lamaran_siswa');
+})->name('Lamaran');
 
+Route::get('/Orderan', function () {
+    return view('Orderan_Siswa.orderan_siswa');
+})->name('Orderan');
 
-Route::get('/Register', function () {
-    return view('Register_Page/register');
-})-> name('register');
+Route::get('/Keterangan', function () {
+    return view('Keterangan_siswa.keterangan_siswa');
+});
 
-Route::get('/Login', function () {
-    return view('Register_Page/login');
-})-> name('login');
-
-Route::get('/Register-Talenta', function () {
-    return view('Register_Page/register-talenta');
-})-> name('register.talenta');
-
-Route::get('/Register-Klien', function () {
-    return view('Register_Page/register-klien');
-}) -> name('register.klien');;
-
-Route::get('/Register-Mentor', function () {
-    return view('Register_Page/register-mentor');
-})-> name('register.mentor');;
-
-
-
+Route::get('/Keterangan-Diterima', function () {
+    return view('Keterangan_siswa.keterangan_siswa_diterima');
+});
 
 Route::get('/Login', function () {
     return view('Register_Page/login');

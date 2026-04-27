@@ -1,0 +1,265 @@
+:root {
+    --primary-color: #1D9E75;
+    --accent-color: #5DCAA5;
+    --background-color: #0E1A1F;
+    --text-color: #E0F2EC;
+    --text-color-secondary: #808080;
+    --card-color: #0F2D2B;
+    --font-outfit: 'Outfit';
+    --font-jakarta: 'Jakarta Sans';
+    --font-cormorant: 'Cormorant Garamond';
+}
+
+.text-color {
+    color: var(--text-color);
+}
+
+.text-color-secondary {
+    color: #808080;
+}
+
+.bg-color {
+    background-color: var(--background-color);
+}
+
+.card_color {
+    background-color: var(--card-color);
+}
+
+.bg_primary {
+    background-color: var(--primary-color);
+}
+.accent-color {
+    color: var(--accent-color);
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.outfit {
+    font-family: 'Outfit', sans-serif;
+}
+
+.jakarta {
+    font-family: 'Jakarta', sans-serif;
+}
+
+.cormorant {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.container-info-jasa {
+    width: 1380px;
+    margin: 40px auto;
+    padding: 0;
+}
+
+.kembali img {
+    margin-top: 2px;
+}
+
+.info {
+    width: 1050px;
+}
+
+.button-pesan {
+    width: 300px;
+}
+
+.jasa {
+    border-radius: 15px;
+    border: 1px solid rgba(29, 158, 117, 0.1);
+    padding: 24px 0px 24px 0px;
+}
+
+.jasa h1 {
+    font-size: 36px;
+    font-weight: 500;
+    padding: 0px 24px;
+}
+
+.jasa hr {
+    background-color: var(--primary-color);
+    height: 1px;
+    border: none;
+}
+
+.container-info-jasa h2 {
+    font-size: 28px;
+}
+
+.rating-detail p {
+    color: #eea026;
+    font-size: 14px;
+    padding: 0px 24px;
+}
+
+.deadline-detail p {
+    font-size: 14px;
+
+}
+
+.talenta {
+    border-radius: 15px;
+    border: 1px solid rgba(29, 158, 117, 0.1);
+}
+
+.talenta img {
+    margin-top: 2px;
+}
+
+#button-talenta {
+    width: 37%;
+    background-color: rgba(29, 158, 117, 0.2);
+    border: 1px solid rgba(29, 158, 117, 0.1);
+}
+
+.ulasan {
+    border-radius: 15px;
+    border: 1px solid rgba(29, 158, 117, 0.1);
+}
+
+.rating-ulasan p {
+    color: #eea026;
+    font-size: 14px;
+    padding: 0px 24px;
+}
+
+.ulasan-profil hr {
+    background-color: var(--primary-color);
+    height: 1px;
+    border: none;
+}
+
+.button-pesan {
+    border-radius: 15px;
+    border: 1px solid rgba(29, 158, 117, 0.1);
+    height: fit-content;
+    position: sticky;
+    top: 30px;
+}
+
+.button-pesan button {
+    background-color: var(--primary-color);
+    border: 1px solid rgba(29, 158, 117, 0.1);
+    width: 100%;
+    font-weight: 500;
+}
+
+.button-pesan button:active,
+.button-pesan button:hover,
+.button-pesan button:focus {
+    background-color: var(--primary-color) !important;
+    outline: none !important;
+    color: var(--text-color) !important;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1px);
+    z-index: 200;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background: var(--background-color);
+    border: 1px solid rgba(29, 158, 117, 0.1);
+    border-radius: 15px;
+    z-index: 201;
+    min-width: 500px;
+    transform: translate(-50%, -50%);
+}
+
+
+.overlay.active,
+.popup.active,
+.popup-sukses.active {
+    display: block;
+}
+.popup button {
+    background-color: var(--primary-color);
+    border: 1px solid rgba(29, 158, 117, 0.1);
+    width: 100%;
+    font-weight: 500;
+}
+.popup button:active,
+.popup button:hover,
+.popup button:focus {
+    background-color: var(--primary-color) !important;
+    outline: none !important;
+    color: var(--text-color) !important;
+}
+.popup-jasa {
+    background-color: var(--card-color);
+    border: 1px solid var(--primary-color);
+}
+.popup-jasa h3 {
+    font-size: 18px;
+}
+.popup-jasa p {
+    font-size: 16px;
+}
+.popup input,
+.popup textarea {
+    padding: 10px 8px;
+    margin-top: 4px;
+    border-radius: 10px;
+    background-color: #0E1A1F;
+    border: 1px solid rgba(93, 202, 165, 0.3)
+}
+.popup input:focus,
+.popup textarea:focus {
+    outline: none;
+    border: 1px solid var(--accent-color);
+}
+.popup label {
+    font-size: 18px;
+    margin-top: 8px;
+}
+b {
+    color: #EF9F27;
+}
+
+.popup-sukses {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background: var(--background-color);
+    border: 1px solid rgba(29, 158, 117, 0.1);
+    border-radius: 15px;
+    z-index: 201;
+    width: 500px;
+    transform: translate(-50%, -50%);
+    padding: 40px 30px;
+}
+.logo {
+    width: 110px;
+    height: 110px;
+}
+.logo img {
+    margin: 15px 0 0 15px;
+}
+.popup-sukses a {
+    background-color: var(--primary-color);
+    border: 1px solid rgba(29, 158, 117, 0.1);
+    width: 30%;
+    font-weight: 500;
+}
+.popup-sukses a:active,
+.popup-sukses a:hover,
+.popup-sukses a:focus {
+    background-color: var(--primary-color) !important;
+    outline: none !important;
+    color: var(--text-color) !important;
+}
+.cursor-pointer {
+    cursor: pointer;
+}

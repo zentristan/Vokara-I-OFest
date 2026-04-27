@@ -18,22 +18,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 
     {{-- CSS --}}
-    <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/dashboard_siswa.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/lamaran_siswa.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/pesanan_siswa.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/proyek.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/portofolio_siswa.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/lencana_siswa.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/ubah_siswa.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/keterangan_siswa.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/keterangan_siswa_diterima.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/sidebar_mentor.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/dashboard_mentor.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/siswa.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/ubah_guru.css') }}">
 
     
 </head>
 <body>
 
-        <x-sidebar></x-sidebar>
+        <x-sidebar_mentor></x-sidebar_mentor>
 
 
 
