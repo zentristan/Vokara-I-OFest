@@ -32,5 +32,14 @@ class KlienJobsController extends Controller
             'id_kategori'      => 'required|in:RPL,DKV',
             'deadline' => 'required|date'
         ]);
+
+        klienJobs::create([
+            'judul_proyek'   => $request->judul_proyek,
+            'deskripsi'     => $request->deskripsi,
+            'harga'         => $request->harga,
+            'id_kategori'      => $request->id_kategori,
+            'deadline' => $request->deadline,
+        ]);
+        return redirect('/lowongan')->with('success', 'Proyek berhasil diposting!');
     }
 }
