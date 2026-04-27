@@ -43,7 +43,7 @@
                 </div>
                 <div class="nav-menu d-flex">
                     <a href="/PasarJasa" class="nav-link">Temukan Talenta</a>
-                    <a href="/LowonganJasa" class="nav-link">Temukan Proyek</a>
+                    <a href="/Lowongan" class="nav-link">Temukan Proyek</a>
                 </div>
                 <div class="nav-button d-flex">
                     <a href="#" class="btn-primary">Daftar Gratis</a>

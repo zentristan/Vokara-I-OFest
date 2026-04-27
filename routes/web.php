@@ -78,7 +78,7 @@ Route::get('/Login', function () {
 })-> name('login');
 
 Route::get('/PenambahanTalenta', function () {
-    return view('Penambahan_Talenta/penambahan-talenta');
+    return view('Penambahan_Klien/penambahan-talenta');
 })-> name('login');
 
 Route::get('/PasarJasa', function () {
