@@ -15,13 +15,14 @@ return new class extends Migration
             $table->id();
 
             $table->text('judul_proyek');
-            $table->integer('id_kategori');
+            // $table->integer('id_kategori');
+            $table->unsignedBigInteger('id_kategori')->default(1);
             $table->text('deskripsi');
             $table->bigInteger('harga');
-            $table->integer('jumlah');
+            $table->integer('jumlah')->default(0);
             $table->date('deadline');
-            $table->text('status');
-            $table->integer('id_client');
+            $table->text('status')->default('open');
+            $table->unsignedBigInteger('id_client')->default(1);
 
             $table->timestamps();
         });

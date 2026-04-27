@@ -2,9 +2,9 @@
     <div class="container my-5">
         <a href="/Lowongan" class="text-decoration-none my-5"><i class="fa-solid fa-arrow-left" style="color: rgb(224, 242, 236);"></i><span class="back-home-button">&nbsp;Kembali ke Temukan Proyek</span></a>
     </div>
-
-    <div class="container" style="max-width: 1100px;">
-        <form action="#" method="POST">
+    <form action="http://127.0.0.1:8000/Lowongan" method="POST">
+    <!-- <form action="{{ route('Lowongan.store') }}" method="POST"> -->
+        <div class="container" style="max-width: 1100px;">
             <div class="row justify-content-center row-cols-1">
                 @csrf
                 <div class="col-8 m-2">
@@ -47,9 +47,10 @@
                     </div>
                 </div>
             </div>
-        </form>
-    </div>
-    <footer class="footer-submit-penambahan d-flex justify-content-center align-items-center mt-5">
-        <button type="submit" class="submit-penambahan-talenta">Post Proyek Sekarang</button>
-    </footer>
+
+        </div>
+        <footer class="footer-submit-penambahan d-flex justify-content-center align-items-center mt-5">
+            <button type="submit" class="submit-penambahan-talenta">Post Proyek Sekarang</button>
+        </footer>
+    </form>
 </x-layout>

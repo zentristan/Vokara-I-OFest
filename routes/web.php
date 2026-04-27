@@ -113,5 +113,6 @@ Route::get('/PasarJasa', function () {
 Route::get('/PasarJasa', [talentaController::class, 'index', 'ambilKategori']);
 
 Route::get('/Lowongan', [KlienJobsController::class, 'index', 'ambilKategori']);
+Route::resource('/Lowongan', KlienJobsController::class);
 
 // Route::get('/PasarJasa', [talentaController::class, 'kateg']);
