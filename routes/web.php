@@ -110,8 +110,15 @@ Route::get('/PasarJasa', function () {
 });
 
 
-Route::get('/PasarJasa', [talentaController::class, 'index', 'ambilKategori']);
+Route::get('/PasarJasa', [talentaController::class, 'index'])->name('PasarJasa.index');
 
-Route::get('/Lowongan', [KlienJobsController::class, 'index', 'ambilKategori']);
+Route::get('/PasarJasa/kategori/{id}', [talentaController::class, 'filterbyKategori'])->name('filterKategori');
+
+Route::get('/PasarJasa/{id}', [talentaController::class, 'show'])->name('PasarJasa.show');
+
+Route::get('/Lowongan', [KlienJobsController::class, 'index',])->name('Lowongan.index');
+
+
+
 
 // Route::get('/PasarJasa', [talentaController::class, 'kateg']);

@@ -246,3 +246,6 @@ body {
     color: var(--accent-color);
     margin-bottom: 0;
 }
+a{
+    text-decoration: none;
+}

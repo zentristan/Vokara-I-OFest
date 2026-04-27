@@ -59,10 +59,11 @@
         </section>
 
         <section class="content-mp">
-            <x-kategori-side-bar :kategori="$kategori" />
+            <x-kategori-side-bar :kategori="$kategori"/>
 
             <div class="jobs-mp row row-cols-lg-3 gap-3">
                 @foreach($talenta as $dataTalenta)
+                <a href="{{route('PasarJasa.show', $dataTalenta->id)}}">
                 <div class="col card-mp p-0">
                     <img class="card-img-mp" src="{{ asset("images/card_image.jpg") }}">
                     <span class="card-tag-mp outfit"><img class="me-1" width="15" height="15"
@@ -75,12 +76,12 @@
                                 <p class="card-subname-mp outfit mb-0">{{$dataTalenta->jurusan}} – {{$dataTalenta->sekolah}}</p>
                             </div>
                         </div>
-                        <p class="card-bottom-title-mp text-color mt-2">{{$dataTalenta->deskripsi}}</p>
+                        <p class="card-bottom-title-mp text-color text-truncate mt-2">{{$dataTalenta->deskripsi}}</p>
                         <div class="card-bottom-info d-flex justify-content-between">
                             <div class="d-flex gap-2 object-fit-contain mt-3">
                                 <div class="rating d-flex object-fit-contain">
                                     <img src="{{ asset("images/star-solid.png") }}">
-                                    <p class="outfit mb-0">5.0</p>
+                                    <p class="outfit mb-0">{{$dataTalenta->rating}}</p>
                                 </div>
                                 <div class="deadline d-flex object-fit-contain">
                                     <img src="{{ asset("images/clock-regular.png") }}">
@@ -89,11 +90,12 @@
                             </div>
                             <div class="harga d-flex flex-column mt-2">
                                 <p class="harga-title outfit text-end">Mulai dari</p>
-                                <p class="harga-angka outfit">Rp 100.000</p>
+                                <p class="harga-angka outfit">Rp{{number_format($dataTalenta->harga, 0, ',', '.')}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
+                </a>
                 @endforeach
             </div>
         </section>
