@@ -48,8 +48,8 @@
                 <div class="search-box-tp">
                     <input type="text" placeholder="Cari Jasa, Kategori...">
                     {{-- <button class="search-filter d-flex"><img src="{{ asset(" images/sliders-solid.png") }}"
-                            width="25" height="25">
-                        <p>Filter</p>
+                    width="25" height="25">
+                    <p>Filter</p>
                     </button> --}}
                     <button class="search-button-mp"><img src="{{ asset("images/magnifying-glass-solid.png") }}"
                             width="25" height="25"></button>
@@ -59,20 +59,10 @@
         </section>
 
         <section class="content-mp">
-            <aside class="sidebar-mp">
-                <h3>Kategori</h3>
-                <ul>
-                    <li class="outfit active">Semua</li>
-                    <li class="outfit ">Desain Grafis</li>
-                    <li class="outfit ">Web Development</li>
-                    <li class="outfit ">Video Editing</li>
-                    <li class="outfit ">Animasi</li>
-                    <li class="outfit ">Fotografi</li>
-                </ul>
-            </aside>
+            <x-kategori-side-bar :kategori="$kategori" />
 
             <div class="jobs-mp row row-cols-lg-3 gap-3">
-
+                @foreach($talenta as $dataTalenta)
                 <div class="col card-mp p-0">
                     <img class="card-img-mp" src="{{ asset("images/card_image.jpg") }}">
                     <span class="card-tag-mp outfit"><img class="me-1" width="15" height="15"
@@ -81,11 +71,11 @@
                         <div class="d-flex">
                             <img class="avatar avatar-sm rounded-circle" src="{{ asset("images/background.png") }}">
                             <div class="d-flex flex-column">
-                                <p class="card-name-mp outfit text-color mb-0">Nama Siswa</p>
-                                <p class="card-subname-mp outfit mb-0">Keahlian – Asal Sekolah</p>
+                                <p class="card-name-mp outfit text-color mb-0">{{$dataTalenta->nama}}</p>
+                                <p class="card-subname-mp outfit mb-0">{{$dataTalenta->jurusan}} – {{$dataTalenta->sekolah}}</p>
                             </div>
                         </div>
-                        <p class="card-bottom-title-mp text-color mt-2">Judul Jasa yang Ditawarkan Pada Card.</p>
+                        <p class="card-bottom-title-mp text-color mt-2">{{$dataTalenta->deskripsi}}</p>
                         <div class="card-bottom-info d-flex justify-content-between">
                             <div class="d-flex gap-2 object-fit-contain mt-3">
                                 <div class="rating d-flex object-fit-contain">
@@ -104,6 +94,7 @@
                         </div>
                     </div>
                 </div>
+                @endforeach
             </div>
         </section>
 

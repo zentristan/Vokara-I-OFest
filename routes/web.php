@@ -3,18 +3,20 @@
 use App\Http\Controllers\SiswaController;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\talentaController;
+use App\Http\Controllers\KlienJobsController;
+
+
 Route::prefix('Dashboard')->group(function () {
 });
-
-Route::resource('/siswas', SiswaController::class);
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/LowonganJasa', function () {
-    return view('Lowongan_Jasa.lowonganjasa');
-});
+// Route::get('/LowonganJasa', function () {
+//     return view('Lowongan_Jasa.lowonganjasa');
+// });
 
 Route::get('/LowonganJasaNo', function () {
     return view('Lowongan_Jasa.lowonganjasano');
@@ -95,18 +97,21 @@ Route::get('/Register-Mentor', function () {
 
 
 
-Route::get('/Proyek', function () {
-    return view('Proyek_Siswa.proyek_siswa');
-})->name('Proyek');
+Route::get('/Login', function () {
+    return view('Register_Page/login');
+})-> name('login');
 
-Route::get('/Portofolio', function () {
-    return view('Portofolio_Siswa.portofolio_siswa');
-})->name('Portofolio');
+Route::get('/PenambahanTalenta', function () {
+    return view('Penambahan_Klien/penambahan-talenta');
+})-> name('login');
 
-Route::get('/Lencana', function () {
-    return view('Lencana_Siswa.lencana_siswa');
-})->name('Lencana');
+Route::get('/PasarJasa', function () {
+    return view('Pasar_Jasa.pasarjasa');
+});
 
-Route::get('/UbahProfil', function () {
-    return view('Ubah_Siswa.ubah_siswa');
-})->name('UbahProfil');
+
+Route::get('/PasarJasa', [talentaController::class, 'index', 'ambilKategori']);
+
+Route::get('/Lowongan', [KlienJobsController::class, 'index', 'ambilKategori']);
+
+// Route::get('/PasarJasa', [talentaController::class, 'kateg']);

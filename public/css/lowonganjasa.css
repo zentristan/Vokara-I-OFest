@@ -11,6 +11,10 @@
     margin: 0 auto;
     padding: 0px 20px 20px 20px;
 }
+.hover-properti:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 -5px 20px rgba(29, 158, 117, 0.2);
+}
 body {
     background-color: var(--background-color);
     scrollbar-width: none;
