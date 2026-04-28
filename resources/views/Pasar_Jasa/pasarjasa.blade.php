@@ -73,7 +73,7 @@
 
             <div class="jobs-mp row row-cols-lg-3 gap-3">
                 @foreach($talenta as $dataTalenta)
-                <a href="{{route('PasarJasa.show', $dataTalenta->id)}}">
+                <a  href="{{route('PasarJasa.show', $dataTalenta->id)}}">
                 <div class="col card-mp p-0">
                     <img class="card-img-mp" src="{{ asset("images/card_image.jpg") }}">
                     <span class="card-tag-mp text-white outfit"><img class="me-1" width="15" height="15"
