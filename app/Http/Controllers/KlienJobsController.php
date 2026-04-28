@@ -29,17 +29,17 @@ class KlienJobsController extends Controller
             'judul_proyek'   => 'required|min:5',
             'deskripsi'     => 'required|min:10',
             'harga'         => 'required|numeric',
-            'id_kategori'      => 'required|in:RPL,DKV',
-            'deadline' => 'required|date'
+            // 'id_kategori'      => 'required|in:RPL,DKV',
+            'deadline' => 'required|numeric|min:1'
         ]);
 
         klienJobs::create([
             'judul_proyek'   => $request->judul_proyek,
             'deskripsi'     => $request->deskripsi,
             'harga'         => $request->harga,
-            'id_kategori'      => $request->id_kategori,
+            // 'id_kategori'      => $request->id_kategori,
             'deadline' => $request->deadline,
         ]);
-        return redirect('/lowongan')->with('success', 'Proyek berhasil diposting!');
+        return redirect('/Lowongan')->with('success', 'Proyek berhasil diposting!');
     }
 }

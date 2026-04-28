@@ -43,7 +43,7 @@
                 <div class="hero-top">
                     <h1 class="hero-title">Temukan Talenta</h1>
                 </div>
-                <h3 class="hero-subtitle">0 Jasa Ditemukan dari Siswa SMK</h3>
+                <h3 class="hero-subtitle">0 Jasa Ditemukan dari siswa - siswa SMK Sederajat Indonesia</h3>
 
                 <div class="search-box-tp">
                     <input type="text" placeholder="Cari Jasa, Kategori...">
@@ -59,15 +59,25 @@
         </section>
 
         <section class="content-mp">
-            <x-kategori-side-bar :kategori="$kategori"/>
+            <aside class="sidebar-tp">
+                <h3>Kategori</h3>
+                <ul>
+                    @foreach($kategori as $kategoriData)
+                    <a href="{{route('filterKategori', $kategoriData->id)}}">
+                    <li class="outfit ">{{$kategoriData->namaKategori}}</li>
+                    </a>
+                    @endforeach
+                    <!-- active (untuk kelas aktif sidebar) -->
+                </ul>
+            </aside>
 
             <div class="jobs-mp row row-cols-lg-3 gap-3">
                 @foreach($talenta as $dataTalenta)
                 <a href="{{route('PasarJasa.show', $dataTalenta->id)}}">
                 <div class="col card-mp p-0">
                     <img class="card-img-mp" src="{{ asset("images/card_image.jpg") }}">
-                    <span class="card-tag-mp outfit"><img class="me-1" width="15" height="15"
-                            src="{{ asset("images/tag-solid.png") }}">Kategori</span>
+                    <span class="card-tag-mp text-white outfit"><img class="me-1" width="15" height="15"
+                            src="{{ asset("images/tag-solid.png") }}">{{$dataTalenta->namaKategori}}</span>
                     <div class="card-bottom-mp d-flex flex-column">
                         <div class="d-flex">
                             <img class="avatar avatar-sm rounded-circle" src="{{ asset("images/background.png") }}">

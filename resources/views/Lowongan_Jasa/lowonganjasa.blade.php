@@ -6,6 +6,7 @@
             <section class="hero-tp">
 
                 <div class="hero-inner">
+                    <a href="{{route('Lowongan.create') }}">tambah data</a>
                     <div class="hero-top">
                         <h1 class="hero-title">Temukan Proyek</h1>
                     </div>
