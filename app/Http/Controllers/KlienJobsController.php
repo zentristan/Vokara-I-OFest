@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class KlienJobsController extends Controller
-{
+{ 
     public function index()
     {
         $klien = klienJobs::all();
@@ -23,6 +23,17 @@ class KlienJobsController extends Controller
     {
         return view('Penambahan_Klien.penambahan-talenta');
     }
+
+
+        public function show($id)
+    {
+        $detailLowongan = klienJobs::findOrFail($id);
+        $kategori = kategori::all();
+
+
+        return view('Lowongan_jasa.detail_lowongan', compact('detailLowongan', 'kategori'));
+    }
+
     public function store(Request $request): RedirectResponse
     {
         $request->validate([

@@ -20,8 +20,8 @@ return new class extends Migration
             $table->text('deskripsi');
             $table->bigInteger('harga');
             $table->integer('jumlah')->default(0);
-            $table->date('deadline');
-            $table->text('status')->default('open');
+            $table->integer('deadline');
+            $table->string('status')->default('open');
             $table->unsignedBigInteger('id_client')->default(1);
 
             $table->timestamps();

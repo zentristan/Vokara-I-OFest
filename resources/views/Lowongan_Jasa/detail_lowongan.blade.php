@@ -41,27 +41,27 @@
         <a href="{{ asset("/PasarJasa") }}"
             class="kembali link-offset-2 link-underline link-underline-opacity-0 text-color-secondary d-flex gap-2">
             <img width="20" height="20" src="{{ asset("images/arrow-left-solid.png") }}">
-            <p class="m-0">Kembali ke Temukan Talenta</p>
+            <p class="m-0">Kembali ke Temukan Proyek</p>
         </a>
         <div class="d-flex mt-4 justify-content-between ">
             <div class="info d-flex flex-column gap-4">
                 <div class="jasa card_color">
-                    <h1 class="text-color text-wrap">{{$detailTalenta->nama}}</h1>
+                    <h1 class="text-color text-wrap">{{$detailLowongan->judul_proyek}}</h1>
                     <div class="d-flex px-4 gap-3">
                         <div class="rating-detail d-flex gap-1">
 
 
                             <img width="20" height="20"  src="{{ asset("images/star-solid.png") }}">
-                            <p class="fw-bold p-0">{{$detailTalenta->rating}}</p>
+                            <p class="fw-bold p-0">{{$detailLowongan->rating}}</p>
                         </div>
                         <div class="deadline-detail d-flex gap-1">
                             <img width="20" height="20" src="{{ asset("images/clock-regular.png") }}">
-                            <p class="text-color">{{$detailTalenta->deadline}} Hari</p>
+                            <p class="text-color">{{$detailLowongan->deadline}} Hari</p>
                         </div>
                     </div>
                     <hr class="mt-0">
-                    <h2 class="px-4 text-color">Deskripsi Jasa</h2>
-                    <p class="px-4 mb-0 text-color">{{$detailTalenta->deskripsi}}</p>
+                    <h2 class="px-4 text-color">{{$detailLowongan->judul_proyek}}</h2>
+                    <p class="px-4 mb-0 text-color">{{$detailLowongan->deskripsi}}</p>
                 </div>
 
                 <div class="talenta p-4 card_color">
@@ -69,8 +69,7 @@
                     <div class="d-flex">
                         <img class="rounded-circle" width="60" height="60" src="{{ asset("images/background.png") }}">
                         <div class="ms-2 d-flex flex-column">
-                            <p class="text-color fs-5 mb-0">{{$detailTalenta->nama}}</p>
-                            <p class="text-color-secondary mb-1">{{$detailTalenta->jurusan}} – {{$detailTalenta->sekolah}}</p>
+                            <p class="text-color fs-5 mb-0">{{$detailLowongan->nama}}</p>
                             <button id="button-talenta" class="btn d-flex gap-1 p-1">
                                 <img width="20" height="20" src="{{ asset("images/user-regular.png") }}">
                                 <p class="text-color m-0">Lihat Profil</p>
@@ -99,7 +98,7 @@
             </div>
             <div class="button-pesan card_color p-4">
                 <h2 class="text-color m-0">Harga mulai dari</h2>
-                <p class="accent-color fw-bold fs-1">Rp{{number_format($detailTalenta->harga, 0, ',', '.')}}</p>
+                <p class="accent-color fw-bold fs-1">Rp{{number_format($detailLowongan->harga, 0, ',', '.')}}</p>
                 <button onclick="bukaPopup()" class="btn text-color fs-5 outfit">Pesan Sekarang</button>
             </div>
         </div>
@@ -113,10 +112,10 @@
             </div>
             <p class="text-color-secondary mb-2 outfit">Isi data di bawah ini untuk melanjutkan pesanan</p>
             <div class="popup-jasa p-3 rounded-2 mb-2">
-                <h3 class="outfit text-wrap text-color outfit">{{$detailTalenta->namajasa}}</h3>
+                <h3 class="outfit text-wrap text-color outfit">{{$detailLowongan->namajasa}}</h3>
                 <div class="popup-harga d-flex justify-content-between">
                     <p class="text-color-secondary mb-0 outfit">Harga</p>
-                    <p class="accent-color mb-0 fw-bold outfit">Rp{{number_format($detailTalenta->harga, 0, ',', '.')}}</p>
+                    <p class="accent-color mb-0 fw-bold outfit">Rp{{number_format($detailLowongan->harga, 0, ',', '.')}}</p>
                 </div>
             </div>
             {{-- <form action="" method="POST"> --}}

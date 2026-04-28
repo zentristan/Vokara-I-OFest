@@ -118,6 +118,8 @@ Route::get('/PasarJasa/{id}', [talentaController::class, 'show'])->name('PasarJa
 
 Route::get('/Lowongan', [KlienJobsController::class, 'index',])->name('Lowongan.index');
 
+Route::get('/LowonganJasa/{id}', [KlienJobsController::class, 'show'])->name('LowonganJasa.show');
+
 Route::get('/TambahLowongan', [KlienJobsController::class, 'create',])->name('Lowongan.create');
 
 Route::post('/TambahLowongan', [KlienJobsController::class, 'store',])->name('Lowongan.store');

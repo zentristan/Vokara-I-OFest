@@ -20,10 +20,24 @@
 
             </section>
 
+
+            <aside class="sidebar-tp">
+                <h3>Kategori</h3>
+                <ul>
+                    @foreach($kategori as $kategoriData)
+                    <a href="{{route('filterKategori', $kategoriData->id)}}">
+                    <li class="outfit ">{{$kategoriData->namaKategori}}</li>
+                    </a>
+                    @endforeach
+                    <!-- active (untuk kelas aktif sidebar) -->
+                </ul>
+            </aside>
+
+
             <section class="content-tp">
-                <x-kategori-side-bar :kategori="$kategori" />
                 <div class="jobs-tp row row-cols-lg-3 gap-3">
                     @foreach($klien as $klienjob)
+                    <a href="{{route('LowonganJasa.show', $klienjob->id)}}">
                     <div class="col card-tp p-0 hover-properti">
                         <span class="card-tag-tp outfit"><img class="me-1" width="15" height="15" src="{{ asset("images/tag-solid.png") }}">Kategori</span>
                         <div class="card-bottom-tp d-flex flex-column">
@@ -47,6 +61,7 @@
                             </div>
                         </div>
                     </div>
+                    </a>
                     @endforeach
                 </div>
             </section>
