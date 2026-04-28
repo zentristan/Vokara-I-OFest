@@ -13,10 +13,12 @@ return new class extends Migration
     {
         Schema::create('talenta_Jobs', function (Blueprint $table) {
             $table->id();
-            $table->text('nama');
-            $table->text('jurusan');
-            $table->text('sekolah');
+            $table->string('nama');
+            $table->string('jurusan');
+            $table->string('sekolah');
             $table->text('deskripsi');
+            $table->string('namajasa');
+            $table->integer('deadline');
             $table->string('image');
             $table->string('harga');
             $table->integer('rating');

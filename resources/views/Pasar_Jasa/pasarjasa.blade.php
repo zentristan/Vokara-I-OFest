@@ -95,7 +95,7 @@
                                 </div>
                                 <div class="deadline d-flex object-fit-contain">
                                     <img src="{{ asset("images/clock-regular.png") }}">
-                                    <p class="outfit">7 Hari</p>
+                                    <p class="outfit">{{$dataTalenta->deadline}} Hari</p>
                                 </div>
                             </div>
                             <div class="harga d-flex flex-column mt-2">

@@ -11,6 +11,8 @@ class talentaJob extends Model
         'jurusan',
         'sekolah',
         'deskripsi',
+        'namajasa',
+        'deadline',
         'image',
         'harga',
         'rating',

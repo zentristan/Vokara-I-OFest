@@ -46,7 +46,7 @@
         <div class="d-flex mt-4 justify-content-between ">
             <div class="info d-flex flex-column gap-4">
                 <div class="jasa card_color">
-                    <h1 class="text-color text-wrap">{{$detailTalenta->nama}}</h1>
+                    <h1 class="text-color text-wrap">{{$detailTalenta->namajasa}}</h1>
                     <div class="d-flex px-4 gap-3">
                         <div class="rating-detail d-flex gap-1">
 
@@ -56,7 +56,7 @@
                         </div>
                         <div class="deadline-detail d-flex gap-1">
                             <img width="20" height="20" src="{{ asset("images/clock-regular.png") }}">
-                            <p class="text-color">60 Hari pengerjaan</p>
+                            <p class="text-color">{{$detailTalenta->deadline}} Hari</p>
                         </div>
                     </div>
                     <hr class="mt-0">
@@ -113,10 +113,10 @@
             </div>
             <p class="text-color-secondary mb-2 outfit">Isi data di bawah ini untuk melanjutkan pesanan</p>
             <div class="popup-jasa p-3 rounded-2 mb-2">
-                <h3 class="outfit text-wrap text-color outfit">Harga Jasa Talenta yang dipesan</h3>
+                <h3 class="outfit text-wrap text-color outfit">{{$detailTalenta->namajasa}}</h3>
                 <div class="popup-harga d-flex justify-content-between">
                     <p class="text-color-secondary mb-0 outfit">Harga</p>
-                    <p class="accent-color mb-0 fw-bold outfit">Rp. 200.000</p>
+                    <p class="accent-color mb-0 fw-bold outfit">Rp{{number_format($detailTalenta->harga, 0, ',', '.')}}</p>
                 </div>
             </div>
             {{-- <form action="" method="POST"> --}}
