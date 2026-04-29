@@ -99,7 +99,7 @@
             <div class="button-pesan card_color p-4">
                 <h2 class="text-color m-0">Harga mulai dari</h2>
                 <p class="accent-color fw-bold fs-1">Rp{{number_format($detailLowongan->harga, 0, ',', '.')}}</p>
-                <button onclick="bukaPopup()" class="btn text-color fs-5 outfit">Pesan Sekarang</button>
+                <button onclick="bukaPopup()" class="btn text-color fs-5 outfit">Lamar Sekarang</button>
             </div>
         </div>
     </div>
@@ -107,10 +107,10 @@
 
         <div class="popup flex-column p-4" id="popup">
             <div class="d-flex justify-content-between">
-                <h2 class="text-color outfit fs-4">Konfirmasi Pesanan</h2>
+                <h2 class="text-color outfit fs-4">Konfirmasi Lamaran</h2>
                 <img class="cursor-pointer" onclick="tutupPopup()" src="{{ asset('images/x-solid.png') }}" width="20" height="20">
             </div>
-            <p class="text-color-secondary mb-2 outfit">Isi data di bawah ini untuk melanjutkan pesanan</p>
+            <p class="text-color-secondary mb-2 outfit">Isi data di bawah ini untuk melanjutkan lamaran</p>
             <div class="popup-jasa p-3 rounded-2 mb-2">
                 <h3 class="outfit text-wrap text-color outfit">{{$detailLowongan->judul_proyek}}</h3>
                 <div class="popup-harga d-flex justify-content-between">
@@ -135,7 +135,7 @@
                     <label class="text-color-secondary outfit">Catatan (opsional)</label>
                     <textarea class="text-color" id="notes" name="catatan" rows="2" cols="40" placeholder="Jelaskan keterangan secara singkat"></textarea>
                 </div>
-                <button class="btn text-color fs-5 outfit mt-3" type="submit" onclick="konfirmasiPesanan()">Konfirmasi Pesanan</button>
+                <button class="btn text-color fs-5 outfit mt-3" type="submit" onclick="konfirmasiPesanan()">Konfirmasi Lamaran</button>
             {{-- </form> --}}
         </div>
 
@@ -144,9 +144,9 @@
                 <div class="logo rounded-circle bg_primary justify-content-center align-items-center mx-auto mb-3">
                     <img class="justify-content-center align-items-center" width="80" height="80" src="{{ asset('images/vokaralogo.png') }}">
                 </div>
-                <h2 class="outfit text-color fw-bold text-center">Pesanan Berhasil!</h2>
-                <p class="outfit text-color-secondary text-center text-wrap">Pesanan Anda telah dikirim. Talenta akan segera meninjau brief Anda dan menghubungi melalui WhatsApp.</p>
-                <a class="btn text-color fs-5 outfit mt-3 justify-content-center mx-auto" href="/PasarJasa">Kembali</a>
+                <h2 class="outfit text-color fw-bold text-center">Lamaran Berhasil!</h2>
+                <p class="outfit text-color-secondary text-center text-wrap">Lamaran Anda telah dikirim. Talenta akan segera meninjau brief Anda dan menghubungi melalui WhatsApp.</p>
+                <a class="btn text-color fs-5 outfit mt-3 justify-content-center mx-auto" href="/Lowongan">Kembali</a>
             </div>
         </div>
 </x-layout>

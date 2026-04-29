@@ -42,13 +42,29 @@ Route::get('/Dashboard_Mentor', function () {
     return view('Dashboard_Mentor.dashboard_mentor');
 })->name('Dashboard_Mentor');
 
+Route::get('/Dashboard_Klien', function () {
+    return view('Dashboard_Klien.dashboard_klien');
+})->name('Dashboard_Klien');
+
 Route::get('/Daftar_Siswa', function () {
     return view('Daftar_Siswa.daftar_siswa');
 })->name('Siswa');
 
+Route::get('/Daftar_Klien', function () {
+    return view('Daftar_Klien.daftar_klien');
+})->name('Klien');
+
+Route::get('/UbahSiswa', function () {
+    return view('Ubah_Siswa.ubah_siswa');
+})->name('UbahSiswa');
+
 Route::get('/UbahGuru', function () {
     return view('Ubah_Guru.ubah_guru');
 })->name('UbahGuru');
+
+Route::get('/UbahKlien', function () {
+    return view('Ubah_Klien.ubah_klien');
+})->name('UbahKlien');
 
 Route::get('/Landing_Page', function () {
     return view('Landing_Page/index');
@@ -69,6 +85,10 @@ Route::get('/Lamaran', function () {
 Route::get('/Orderan', function () {
     return view('Orderan_Siswa.orderan_siswa');
 })->name('Orderan');
+
+Route::get('/Jasa', function () {
+    return view('JasaTalenta_Klien.jasatalenta_klien');
+})->name('Jasa');
 
 Route::get('/Keterangan', function () {
     return view('Keterangan_siswa.keterangan_siswa');

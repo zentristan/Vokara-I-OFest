@@ -34,7 +34,7 @@
             <a href="{{ url('Proyek') }}"><li class="{{ $route == 'Proyek' ? 'active' : '' }}"><i class="bi bi-suitcase-lg"></i>Proyek Aktif</li></a>
             <a href="{{ url('Portofolio') }}"><li class="{{ $route == 'Portofolio' ? 'active' : '' }}"><i class="bi bi-folder2-open"></i>Portofolio</li></a>
             <a href="{{ url('Lencana') }}"><li class="{{ $route == 'Lencana' ? 'active' : '' }}"><i class="fa-solid fa-medal"></i>Lencana</li></a>
-            <a href="{{ url('UbahProfil') }}"><li class="{{ $route == 'UbahProfil' ? 'active' : '' }}"><i class="fa-regular fa-user"></i>Ubah Profil</li></a>
+            <a href="{{ url('UbahSiswa') }}"><li class="{{ $route == 'UbahSiswa' ? 'active' : '' }}"><i class="fa-regular fa-user"></i>Ubah Profil</li></a>
         </ul>
     </div>
 

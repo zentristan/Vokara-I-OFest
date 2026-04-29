@@ -1,0 +1,158 @@
+:root{
+    --primary-color: #1D9E75;
+    --accent-color: #5DCAA5;
+    --highlight-color: #EF9F27;
+    --card-color: #0F2D2B;
+    --background-color: #0E1A1F;
+    --text-color: #e0f2ec;
+    --border-color : 2px solid #264D44;
+}
+
+.sidebar-klien {
+    background-color: var(--card-color);
+    width: 260px;
+    height: 100vh;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.sidebar-klien-header {
+    padding: 5px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.sidebar-klien-header img {
+    display: block;
+    margin: 12px auto 12px 25px !important;
+}
+.sidebar-klien-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.profil-klien-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 10px;
+}
+.card-klien-profil {
+    border-radius: 50%;
+    width: 65px;      /* diperkecil dari 90px */
+    height: 65px;
+    background-color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.card-klien-profil p {
+    color: black;
+    font-family: "Outfit", sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+.profil-klien-info h2 {
+    font-family: "Outfit", sans-serif;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 2px 0;
+}
+.profil-klien-info p {
+    font-family: "Outfit", sans-serif;
+    color: gray;
+    font-size: 13px;
+    margin: 0;
+}
+.card-klien-profil1 {
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    background-color: var(--text-color);
+    flex-shrink: 0;
+}
+.sidebar-klien-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.2); 
+}
+.sidebar-klien-nav ul {
+    margin-bottom: 210px;
+    padding: 0 0 0 20px;
+}
+.sidebar-klien-nav ul li {
+    font-family: "Outfit", sans-serif;
+    margin-top: 5px;
+    list-style-type: none;
+    color: gray;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 8px 20px;
+    margin-left: -25px;
+    width: 85%;
+    display: block;
+    border-left: 4px solid transparent;
+    border-radius: 8px;
+}
+.sidebar-klien-bottom {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px 20px 15px;
+    margin-top: auto;
+}
+.sidebar-klien-bottom ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+.sidebar-klien-bottom ul li {
+    font-family: "Outfit", sans-serif;
+    margin-top: 20px;
+    list-style-type: none;
+    font-size: 15px;
+    color: gray;
+    cursor: pointer;
+}
+.sidebar-klien-nav ul li i,
+.sidebar-klien-bottom ul li i {
+    color: gray;
+    margin-right: 14px;
+}
+
+.sidebar-klien-nav ul li.active i {
+    color: white;
+}
+
+.sidebar-klien-bottom ul li a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar-klien-nav ul li.active {
+    background-color: var(--background-color);     
+    color: var(--accent-color);              
+    border-left: 4px solid var(--primary-color); 
+    border-radius: 8px;
+    padding: 8px 20px;
+    margin-left: -25px;
+    width: 85%;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+}
