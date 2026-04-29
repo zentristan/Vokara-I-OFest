@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\talentaController;
+use App\Http\Controllers\KlienJobsController;
 use App\Http\Controllers\RegisteredUserController;
 use Illuminate\Support\Facades\Route;
 
@@ -59,16 +60,16 @@ Route::middleware('auth')->group(function () {
     });
 });
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('/PasarJasa/{id}', [talentaController::class, 'show'])->name('PasarJasa.show');
+// Route::middleware('auth')->group(function () {
+//     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+//     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+//     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+//     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+//     Route::get('/PasarJasa/{id}', [talentaController::class, 'show'])->name('PasarJasa.show');
     
     
 
-});
+// });
 
 
 require __DIR__.'/auth.php';

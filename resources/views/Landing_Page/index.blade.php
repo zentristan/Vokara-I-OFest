@@ -46,7 +46,7 @@
                     <a href="/Lowongan" class="nav-link">Temukan Proyek</a>
                 </div>
                 <div class="nav-button d-flex">
-                    <a href="/register" class="btn-primary">Daftar Gratis</a>
+                    <a href="{{ route('register')}}" class="btn-primary">Daftar Gratis</a>
                     <a href="/login" class=btn-secondary>Masuk</a>
                 </div>
                 <div class="hamburger" id="hamburger">
