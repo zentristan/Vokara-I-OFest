@@ -24,7 +24,7 @@ class KlienJobsController extends Controller
 
     public function create(): View
     {
-        return view('Penambahan_Klien.penambahan-talenta');
+        return view('Penambahan_Klien.penambahan-klien');
     }
 
 

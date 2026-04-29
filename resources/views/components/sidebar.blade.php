@@ -13,7 +13,7 @@
                 <p>Foto</p>
             </div>
             <div class="profil-info">
-                <h2>Nama Siswa</h2>
+                <h2>{{ Auth::user()->name }}</h2>
                 <p>SMK Informatika Pesat</p>
             </div>
         </div>
@@ -40,8 +40,17 @@
 
     <div class="sidebar-bottom">
         <ul>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+
+                <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 button-logout">
+                    <i class="bi bi-box-arrow-right"></i>
+                    {{ __('Log Out') }}
+                </button>
+            </form>
             <a href="{{ url('LowonganJasa') }}"><li><i class="bi bi-rocket-takeoff"></i>Browse Proyek</li></a>  
-            <li><i class="bi bi-box-arrow-right"></i>Keluar</li>
+            <a href="/PasarJasa"><li><i class="bi bi-rocket-takeoff"></i>Browse Jasa</li></a>  
+
         </ul>
     </div>
 </section>
