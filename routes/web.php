@@ -90,6 +90,10 @@ Route::middleware('auth')->group(function () {
         Route::get('/Dasboard_Mentor/dashboard_mentor', [DashboardController::class, 'mentor'])->name('dashboard.mentor');
         Route::get('/PasarJasa/{id}', [talentaController::class, 'show'])->name('PasarJasa.show');
     });
+    Route::middleware('role:klien')->group(function(){
+        Route::get('/Dasboard_Klien/dashboard_klien', [DashboardController::class, 'klien'])->name('dashboard.klien');
+        Route::get('/PasarJasa/{id}', [talentaController::class, 'show'])->name('PasarJasa.show');
+    });
 });
 
 // Route::middleware('auth')->group(function () {
