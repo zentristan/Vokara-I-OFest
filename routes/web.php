@@ -65,10 +65,17 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/PasarJasa/{id}', [talentaController::class, 'show'])->name('PasarJasa.show');
-    
-    
 
+    Route::middleware('role:talenta')->group(function(){
+        Route::get('/Dasboard_Siswa/dashboard_siswa', [DashboardController::class, 'talenta'])->name('dashboard.siswa');
+        Route::get('/PasarJasa/{id}', [talentaController::class, 'show'])->name('PasarJasa.show');
+    });
+    Route::middleware('role:mentor')->group(function(){
+        Route::get('/Dasboard_Mentor/dashboard_mentor', [DashboardController::class, 'mentor'])->name('dashboard.mentor');
+        Route::get('/PasarJasa/{id}', [talentaController::class, 'show'])->name('PasarJasa.show');
+    });
 });
+
 
 
 require __DIR__.'/auth.php';
