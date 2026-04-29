@@ -1,0 +1,142 @@
+:root {
+    --background-color: #0E1A1F;
+    --card-color: #0F2D2B;
+    --primary-color: #1D9E75;
+    --accent-color: #5DCAA5;
+    --highlight-color: #EF9F27;
+    --text-color: #E0F2EC;
+    --body-font: "Plus Jakarta Sans", sans-serif;
+    --secondary-font: "Outfit", sans-serif;
+    --accent-font: "Cormorant Garamond", serif;
+}
+
+.text-color {
+    color: var(--text-color);
+}
+
+.text-color-secondary {
+    color: #808080;
+}
+
+.bg-color {
+    background-color: var(--background-color);
+}
+
+.card_color {
+    background-color: var(--card-color);
+}
+
+.bg_primary {
+    background-color: var(--primary-color);
+}
+
+.accent-color {
+    color: var(--accent-color);
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.outfit {
+    font-family: 'Outfit', sans-serif;
+}
+
+.jakarta {
+    font-family: 'Jakarta', sans-serif;
+}
+
+.cormorant {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.back-button {
+    width: 1380px;
+    margin: 40px auto;
+}
+
+.container-input {
+    width: 1380px;
+    margin: 20px auto;
+}
+
+.form-input-left h2 {
+    font-size: 24px;
+}
+
+.form-input-right h2 {
+    font-size: 24px;
+}
+
+.back-home-button {
+    font-family: var(--body-font);
+    text-decoration: none;
+}
+
+.input-left {
+    width: 60%;
+}
+
+.input-right {
+    width: 37%;
+}
+
+.form-heading {
+    color: var(--text-color);
+    font-family: var(--body-font);
+    font-weight: 700;
+}
+
+.form-deskripsi {
+    color: var(--text-color);
+    font-family: var(--secondary-font);
+    opacity: 0.8;
+}
+
+.input-box {
+    background-color: #d9d9d933;
+    border-radius: 15px;
+    border: 1px solid rgba(29, 158, 117, 0.5);
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.footer-submit-penambahan {
+    background-color: var(--card-color);
+    padding: 30px 10px;
+}
+
+.submit-penambahan-talenta {
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    color: var(--text-color);
+    border: none;
+    padding: 15px 50px;
+    font-family: var(--body-font);
+    font-weight: 700;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.input-file {
+    color: var(--text-color);
+}
+.form-input-right img {
+    border: 1px solid rgba(29, 158, 117, 0.5);
+    background-color: #d9d9d933;
+    width: 350px;
+    height: 180px;
+}

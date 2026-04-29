@@ -1,56 +1,59 @@
 <x-layout :showFooter="false">
-    <div class="container my-5">
-        <a href="/Lowongan" class="text-decoration-none my-5"><i class="fa-solid fa-arrow-left" style="color: rgb(224, 242, 236);"></i><span class="back-home-button">&nbsp;Kembali ke Temukan Proyek</span></a>
+
+    <div class="back-button p-0">
+        <a href="/PasarJasa" class="text-decoration-none">
+            <i class="fa-solid fa-arrow-left" style="color: #808080;"></i>
+            <span class="back-home-button outfit text-color-secondary">&nbsp;Kembali ke Temukan Talenta</span>
+        </a>
     </div>
-    <!-- <form action="http://127.0.0.1:8000/Lowongan" method="POST"> -->
-    <form action="{{ route('Lowongan.store') }}" method="POST">
-        <div class="container" style="max-width: 1100px;">
-            <div class="row justify-content-center row-cols-1">
+
+    <div class="container-input">
+        <form action="{{ route('Lowongan.store') }}" method="POST">
+            <div class="justify-content-between d-flex">
                 @csrf
-                <div class="col-8 m-2">
-                    <div class="form-group">
-                        <h4 class="form-heading">Nama Proyek *</h4>
-                        <p class="form-deskripsi">Tuliskan nama untuk proyek yang akan anda tawarkan</p>
-                        <input type="text" name="judul_proyek" class="input-box w-100" placeholder="Nama Proyek">
+                <div class="input-left">
+                    <div class="form-input-left">
+                        <h2 class="text-color jakarta mb-2">Nama Jasa *</h2>
+                        <p class="text-color-secondary outfit mb-2">Tuliskan nama jasa yang akan anda tawarkan</p>
+                        <input class="input-box mb-4" type="text" name="nama-jasa" placeholder="Nama jasa">
+                    </div>
+                    <div class="form-input-left">
+                        <h2 class="text-color jakarta mb-2">Deskripsi *</h2>
+                        <p class="text-color-secondary outfit mb-2">Tuliskan deskripsi untuk jasa yang anda tawarkan, jelaskan dengan lengkap dan detail</p>
+                        <textarea class="input-box mb-4" rows="7" name="deskripsi-jasa" placeholder="Deskripsi jasa"></textarea>
+                    </div>
+                    <div class="form-input-left">
+                        <h2 class="text-color jakarta mb-2">Harga (Rp) *</h2>
+                        <p class="text-color-secondary outfit mb-2">Tuliskan range harga yang akan anda tawarkan untuk jasa anda</p>
+                        <input class="input-box mb-4" type="number" name="harga-jasa" placeholder="Rp. ">
                     </div>
                 </div>
-                <div class="col-8 m-2">
-                    <div class="form-group">
-                        <h4 class="form-heading">Deskripsi *</h4>
-                        <p class="form-deskripsi">Tuliskan deskripsi proyek dengan jelas dan detail</p>
-                        <textarea name="deskripsi" class="input-box w-100" id="" placeholder="Deskripsi Proyek"></textarea>
+                <div class="input-right">
+                    <div class="form-input-right">
+                        <h2 class="text-color jakarta mb-2">Thumbnail *</h2>
+                        <p class="text-color-secondary outfit mb-2">Upload thumbnail untuk jasa yang anda tawarkan</p>
+                        <input class="input-file mb-3" type="file" accept=".jpg, .jpeg, .png" name="thumbnail-jasa">
+                        <img src="{{ asset("") }}" class="img-thumbnail mb-3 rounded-3">
                     </div>
-                </div>
-                <div class="col-8 m-2">
-                    <div class="form-group">
-                        <h4 class="form-heading">Harga (Rp) *</h4>
-                        <p class="form-deskripsi">Tuliskan range harga yang akan anda tawarkan untuk jasa anda</p>
-                        <input type="number" name="harga" class="input-box w-100" placeholder="Rp.">
-                    </div>
-                </div>
-                <div class="col-8 m-2">
-                    <div class="form-group">
-                        <h4 class="form-heading">Kategori *</h4>
-                        <p class="form-deskripsi">Tuliskan range harga yang akan anda tawarkan untuk jasa anda</p>
-                        <select name="id_kategori" id="" class="input-box w-100">
-                            <option value="" disabled selected>Pilih Kategori</option>
-                            <option value="RPL">RPL</option>
-                            <option value="DKV">DKV</option>
+                    <div class="form-input-right">
+                        <h2 class="text-color jakarta mb-2">Kategori *</h2>
+                        <select class="input-box mb-4" name="kategori" id="kategori">
+                            {{-- @foreach ($collection as $item) --}}
+                            <option></option>
+                            {{-- @endforeach --}}
                         </select>
                     </div>
-                </div>
-                <div class="col-8 m-2">
-                    <div class="form-group">
-                        <h4 class="form-heading">Tenggat Waktu *</h4>
-                        <p class="form-deskripsi">Masukkan jumlah hari yang dibutuhkan untuk menyelesaikan jasa ini</p>
-                        <input type="number" name="deadline" class="input-box w-100" placeholder="cth. 10.">
+                    <div class="form-input-right">
+                        <h2 class="text-color jakarta mb-2">Tenggat Waktu (Hari) *</h2>
+                        <p class="text-color-secondary outfit mb-2">Masukkan jumlah hari yang dibutuhkan untuk menyelesaikan jasa ini</p>
+                        <input class="input-box mb-4" type="number" name="nama-jasa" placeholder="cth: 10">
                     </div>
                 </div>
             </div>
+    </div>
 
-        </div>
-        <footer class="footer-submit-penambahan d-flex justify-content-center align-items-center mt-5">
-            <button type="submit" class="submit-penambahan-talenta">Post Proyek Sekarang</button>
-        </footer>
+    <footer class="footer-submit-penambahan d-flex justify-content-center align-items-center mt-5">
+        <button type="submit" class="submit-penambahan-talenta">Post Proyek Sekarang</button>
+    </footer>
     </form>
 </x-layout>

@@ -67,9 +67,7 @@ Route::get('/Landing_Page', function () {
     return view('Landing_Page/index');
 });
 
-Route::get('/Dashboard', function () {
-    return view('Dashboard_Siswa.dashboard_siswa');
-})->name('Dashboard');
+Route::get('/PasarJasa', [talentaController::class, 'index'])->name('PasarJasa.index');
 
 Route::get('/LandingPage', function () {
     return view('Landing_Page/index');
@@ -130,8 +128,12 @@ Route::get('/Login', function () {
     return view('Register_Page/login');
 })-> name('login');
 
+Route::get('/PenambahanKlien', function () {
+    return view('Penambahan_Klien/penambahan_klien');
+})-> name('login');
+
 Route::get('/PenambahanTalenta', function () {
-    return view('Penambahan_Klien/penambahan-talenta');
+    return view('Penambahan_Talenta/penambahan_talenta');
 })-> name('login');
 
 Route::get('/PasarJasa', function () {
