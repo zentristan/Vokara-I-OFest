@@ -24,13 +24,13 @@
             <a href="{{ url('Dashboard_Klien') }}"><li class="{{ $route == 'Dashboard_Klien' ? 'active' : '' }}"><i class="bi bi-columns-gap"></i>Overview</li></a>
             <a href="{{ url('UbahKlien') }}"><li class="{{ $route == 'UbahKlien' ? 'active' : '' }}"><i class="fa-regular fa-user"></i>Ubah Profil</li></a>
             <a href="{{ url('Daftar_Klien') }}"><li class="{{ $route == 'Klien' ? 'active' : '' }}"><i class="fa-solid fa-user-graduate"></i>Pelamar</li></a>
-            <a href="{{ url('Jasa') }}"><li class="{{ $route == 'Jasa' ? 'active' : '' }}"><i class="fa-regular fa-user"></i>Jasa Talenta</li></a>
+            <a href="{{ url('Jasa') }}"><li class="{{ $route == 'Jasa' ? 'active' : '' }}"><i class="fa-solid fa-star"></i></i>Jasa Talenta</li></a>
         </ul>
     </div>
 
     <div class="sidebar-klien-bottom">
         <ul>
-            <a href="{{ url('LowonganJasa') }}"><li><i class="bi bi-rocket-takeoff"></i>Lihat Proyek</li></a>  
+            <a href="{{ url('Lowongan') }}"><li><i class="bi bi-rocket-takeoff"></i>Lihat Proyek</li></a>  
             <a href="{{ url('PasarJasa') }}"><li><i class="bi bi-rocket-takeoff"></i>Lihat Talenta</li></a>  
             <li><i class="bi bi-box-arrow-right"></i>Keluar</li>
         </ul>

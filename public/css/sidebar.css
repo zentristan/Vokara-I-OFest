@@ -82,7 +82,6 @@
     width: 100%;
     border-radius: 10px;
     padding: 8px;
-    margin-bottom: 20px;
 }
 .badges p {
     color: var(--text-color);
@@ -126,6 +125,14 @@
     color: var(--accent-color);
     border-left: 4px solid var(--primary-color);
 }
+.button-logout { 
+    font-size: 14px;                                
+}
+
+.button-logout i {
+    color: rgb(255, 255, 255);
+    margin-right: 10px;                                     
+}
 
 .sidebar-nav ul li.active i {
     color: white;
@@ -143,7 +150,7 @@
 }
 .sidebar-bottom ul li {
     font-family: "Outfit", sans-serif;
-    margin-top: 15px;
+    margin-top: 12px;
     list-style-type: none;
     font-size: 15px;
     color: gray;

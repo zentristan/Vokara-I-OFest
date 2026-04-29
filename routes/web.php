@@ -79,6 +79,18 @@ Route::get('/Lamaran', function () {
     return view('Lamaran_Siswa.lamaran_siswa');
 })->name('Lamaran');
 
+Route::get('/Proyek', function () {
+    return view('Proyek_Siswa.proyek_siswa');
+})->name('Proyek');
+
+Route::get('/Portofolio', function () {
+    return view('Portofolio_Siswa.portofolio_siswa');
+})->name('Portofolio');
+
+Route::get('/Lencana', function () {
+    return view('Lencana_Siswa.lencana_siswa');
+})->name('Lencana');
+
 Route::get('/Orderan', function () {
     return view('Orderan_Siswa.orderan_siswa');
 })->name('Orderan');

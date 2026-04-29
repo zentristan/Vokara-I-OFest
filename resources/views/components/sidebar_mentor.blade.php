@@ -35,21 +35,22 @@ $route = request()->route()->getName();
 
     <div class="sidebar-mentor-bottom">
         <ul>
+            
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+
+                <button type="submit" class="button-logout">
+                    <i class="bi bi-box-arrow-right"></i>
+                    {{ __('Log Out') }}
+                </button>
+            </form>
+
             <a href="{{ url('LowonganJasa') }}">
                 <li><i class="bi bi-rocket-takeoff"></i>Lihat Proyek</li>
             </a>
             <a href="{{ url('PasarJasa') }}">
                 <li><i class="bi bi-rocket-takeoff"></i>Lihat Talenta</li>
             </a>
-
-            <form method="POST" action="{{ route('logout') }}">
-                @csrf
-
-                <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 button-logout">
-                    <i class="bi bi-box-arrow-right"></i>
-                    {{ __('Log Out') }}
-                </button>
-            </form>
         </ul>
     </div>
 </section>

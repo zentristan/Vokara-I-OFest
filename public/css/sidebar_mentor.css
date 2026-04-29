@@ -108,6 +108,14 @@
     border-left: 4px solid transparent;
     border-radius: 8px;
 }
+.button-logout { 
+    font-size: 14px;                                
+}
+.button-logout i {
+    color: rgb(255, 255, 255);
+    margin-right: 10px;
+    margin-left: -8px;                                     
+}
 .sidebar-mentor-bottom {
     display: flex;
     flex-direction: column;

@@ -2,7 +2,7 @@
 <div class="kontener">
 
     <div class="card-siswa">
-        <h2>Halo, {{ Auth::user()->name }}</h2>
+        <h2>Halo, {{ Auth::user()?->name }}</h2>
         <p>Lengkapi profilmu untuk mulai melamar proyek!</p>
         <button>
             Atur Profil <i class="bi bi-arrow-right"></i>
