@@ -92,15 +92,10 @@
 
         function proceed() {
             if (!selectedRole) return;
-
-            const routes = {
-                talenta: "{{ route('register.talenta')}}",
-                klien: "{{ route('register.klien')}}",
-                mentor: "{{ route('register.mentor')}}",
-            };
-            window.location.href = routes[selectedRole] + '?role=' + selectedRole;
+            window.location.href = "/register/form?role=" + selectedRole;
         }
     </script>
     <script src="{{ asset('js/RegisterPage.js') }}"></script>
 </body>
+
 </html>

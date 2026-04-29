@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\talentaController;
+use App\Http\Controllers\RegisteredUserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -12,6 +13,14 @@ Route::get('/', function () {
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/Dashboard', function () {
+    return view('Dashboard_Siswa.dashboard_siswa');
+})->name('dashboard.siswa');
+
+Route::get('/Dashboard_Mentor', function () {
+    return view('Dashboard_Mentor.dashboard_mentor');
+})->name('dashboard.mentor');
 
 Route::get('/PasarJasa', [talentaController::class, 'index'])->name('PasarJasa.index');
 
@@ -23,9 +32,31 @@ Route::get('/Login', function () {
     return view('Register_Page/login');
 })-> name('login');
 
-Route::get('/Register', function () {
-    return view('Register_Page/register');
+Route::get('/register', function () {
+    return view('auth.register-choosing');
 })-> name('register');
+
+// Route::get('/register/talenta', function () {
+//     return view('auth.register-form', ['role' => 'talenta']);
+// })->name('register.talenta');
+
+// Route::get('/register/klien', function () {
+//     return view('auth.register-form', ['role' => 'klien']);
+// })->name('register.klien');
+
+// Route::get('/register/mentor', function () {
+//     return view('auth.register-form', ['role' => 'mentor']);
+// })->name('register.mentor');
+
+
+
+Route::get('/register/talenta', fn() => view('auth.register-form', ['role' => 'talenta']));
+
+Route::get('/register/klien',   fn() => view('auth.register-form', ['role' => 'klien']));
+
+Route::get('/register/mentor',  fn() => view('auth.register-form', ['role' => 'mentor']));
+
+Route::post('/register', [RegisteredUserController::class, 'store'])->name('register.store');
 
 
 Route::middleware('auth')->group(function () {
