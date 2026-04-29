@@ -2,8 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\talentaController;
 use App\Http\Controllers\KlienJobsController;
+use App\Http\Controllers\talentaController;
 use App\Http\Controllers\RegisteredUserController;
 use Illuminate\Support\Facades\Route;
 
