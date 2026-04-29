@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\KlienJobsController;
 use App\Http\Controllers\talentaController;
 use Illuminate\Support\Facades\Route;
 
@@ -42,8 +43,12 @@ Route::get('/Login', function () {
     return view('Register_Page/login');
 })-> name('login');
 
+Route::get('/PenambahanKlien', function () {
+    return view('Penambahan_Klien/penambahan_klien');
+})-> name('login');
+
 Route::get('/PenambahanTalenta', function () {
-    return view('Penambahan_Klien/penambahan-talenta');
+    return view('Penambahan_Talenta/penambahan_talenta');
 })-> name('login');
 
 Route::get('/PasarJasa', function () {
