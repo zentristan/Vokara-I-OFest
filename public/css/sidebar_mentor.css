@@ -6,6 +6,10 @@
     --background-color: #0E1A1F;
     --text-color: #e0f2ec;
     --border-color : 2px solid #264D44;
+
+    --body-font: "Plus Jakarta Sans", sans-serif;
+    --secondary-font: "Outfit", sans-serif;
+    --accent-font: "Cormorant Garamond", serif;
 }
 
 .sidebar-mentor {
@@ -155,4 +159,12 @@
 
 a{
     text-decoration: none;
+}
+.button-logout{
+    background-color: transparent;
+    border: none;
+    color: var(--text-color);
+    opacity: 0.5;
+    margin: 10px 5px;
+    font-family: var(--body-font);
 }

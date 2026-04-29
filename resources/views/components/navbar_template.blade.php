@@ -23,7 +23,7 @@
                         <hr>
                         <ul class="dropdown-link m-0 p-0">
                             <li>
-                                <a href="/Dashboard">Profile</a>
+                                <a href="{{route('dashboard')}}">Profile</a>
                             </li>
                             <li>
                                 <a href="">Ubah Profil</a>

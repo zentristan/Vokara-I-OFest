@@ -1,22 +1,19 @@
 <?php
 
-use App\Http\Controllers\SiswaController;
-use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\talentaController;
 use App\Http\Controllers\KlienJobsController;
 
-
-Route::prefix('Dashboard')->group(function () {
-});
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/LowonganJasa', function () {
-//     return view('Lowongan_Jasa.lowonganjasa');
-// });
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/LowonganJasaNo', function () {
     return view('Lowongan_Jasa.lowonganjasano');
@@ -146,6 +143,16 @@ Route::get('/TambahLowongan', [KlienJobsController::class, 'create',])->name('Lo
 
 Route::post('/TambahLowongan', [KlienJobsController::class, 'store',])->name('Lowongan.store');
 
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/PasarJasa/{id}', [talentaController::class, 'show'])->name('PasarJasa.show');
+    
+    
+
+});
 
 
-// Route::get('/PasarJasa', [talentaController::class, 'kateg']);
+require __DIR__.'/auth.php';
