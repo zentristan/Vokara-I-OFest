@@ -9,7 +9,12 @@
     --secondary-font: "Outfit", sans-serif;
     --accent-font: "Cormorant Garamond", serif;
 }
-
+input{
+    color: var(--text-color);
+}
+textarea{
+    color: var(--text-color);
+}
 .text-color {
     color: var(--text-color);
 }
@@ -71,6 +76,7 @@
 .back-home-button {
     font-family: var(--body-font);
     text-decoration: none;
+    color: var(--text-color);
 }
 
 .input-left {

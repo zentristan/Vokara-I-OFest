@@ -1,6 +1,6 @@
 <x-layout :showFooter="false">
     <div class="container my-5">
-        <a href="/Lowongan" class="text-decoration-none my-5"><i class="fa-solid fa-arrow-left" style="color: rgb(224, 242, 236);"></i><span class="back-home-button">&nbsp;Kembali ke Temukan Proyek</span></a>
+        <a href="{{ route('lowongan.index') }}" class="text-decoration-none my-5 "><i class="fa-solid fa-arrow-left" style="color: rgb(224, 242, 236);"></i><span class="back-home-button">&nbsp;Kembali ke Temukan Proyek</span></a>
     </div>
     <!-- <form action="http://127.0.0.1:8000/Lowongan" method="POST"> -->
     <form action="{{ route('Lowongan.store') }}" method="POST">

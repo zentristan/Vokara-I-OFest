@@ -7,6 +7,12 @@
     --text-color: #e0f2ec;
     --border-color : 2px solid #264D44;
 }
+input{
+    color: var(--text-color);
+}
+textarea{
+    color: var(--text-color);
+}
 .profile-form {
     display: flex;
     flex-direction: column;

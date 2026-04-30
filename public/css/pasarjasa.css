@@ -9,6 +9,12 @@
     --font-cormorant: 'Cormorant Garamond';
 }
 /* Class Color */
+input{
+    color: var(--text-color);
+}
+textarea{
+    color: var(--text-color);
+}
 .text-color {
     color: var(--text-color);
 }

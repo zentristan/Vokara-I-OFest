@@ -61,13 +61,15 @@ Route::get('/Keterangan-Diterima', function () {
     return view('Keterangan_siswa.keterangan_siswa_diterima');
 });
 
+
+
 Route::get('/login', function () {
     return view('auth/login');
-})-> name('login');
+})->name('login');
 
 Route::get('/register', function () {
     return view('auth.register-choosing');
-})-> name('register');
+})->name('register');
 
 Route::get('/lowongan', [KlienJobsController::class, 'index'])->name('lowongan.index');
 
@@ -84,17 +86,26 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/PasarJasa/{id}', [talentaController::class, 'show'])->name('PasarJasa.show');
 
-    Route::middleware('role:talenta')->group(function(){
+    Route::middleware('role:talenta')->group(function () {
         Route::get('/Dasboard_Siswa/dashboard_siswa', [DashboardController::class, 'talenta'])->name('dashboard.siswa');
-        Route::get('/PasarJasa/{id}', [talentaController::class, 'show'])->name('PasarJasa.show');
+        Route::get('/Lamaran', function () {
+            return view('Lamaran_Siswa.lamaran_siswa');
+        })->name('Lamaran');
+        Route::get('/UbahSiswa', function () {
+            return view('Ubah_Siswa.ubah_siswa');
+        })->name('UbahSiswa');
     });
-    Route::middleware('role:mentor')->group(function(){
+    Route::middleware('role:mentor')->group(function () {
         Route::get('/Dasboard_Mentor/dashboard_mentor', [DashboardController::class, 'mentor'])->name('dashboard.mentor');
-        Route::get('/PasarJasa/{id}', [talentaController::class, 'show'])->name('PasarJasa.show');
+        Route::get('/Daftar_Siswa', function () {
+            return view('Daftar_Siswa.daftar_siswa');
+        })->name('Siswa');
+        Route::get('/UbahGuru', function () {
+            return view('Ubah_Guru.ubah_guru');
+        })->name('UbahGuru');
     });
-    Route::middleware('role:klien')->group(function(){
+    Route::middleware('role:klien')->group(function () {
         Route::get('/Dasboard_Klien/dashboard_klien', [DashboardController::class, 'klien'])->name('dashboard.klien');
-        Route::get('/PasarJasa/{id}', [talentaController::class, 'show'])->name('PasarJasa.show');
     });
 });
 
@@ -104,10 +115,10 @@ Route::middleware('auth')->group(function () {
 //     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 //     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 //     Route::get('/PasarJasa/{id}', [talentaController::class, 'show'])->name('PasarJasa.show');
-    
-    
+
+
 
 // });
 
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

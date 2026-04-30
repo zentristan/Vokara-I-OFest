@@ -22,6 +22,12 @@ input[type="checkbox"]{
     accent-color: var(--accent-color);
     border-radius: 10px;
 }
+input{
+    color: var(--text-color);
+}
+textarea{
+    color: var(--text-color);
+}
 ::placeholder{
     color: var(--text-color);
     opacity: 0.8;

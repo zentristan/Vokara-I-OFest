@@ -5,6 +5,10 @@
     --card-color: #0F2D2B;
     --background-color: #0E1A1F;
     --text-color: #e0f2ec;
+
+    --body-font: "Plus Jakarta Sans", sans-serif;
+    --secondary-font: "Outfit", sans-serif;
+    --accent-font: "Cormorant Garamond", serif;
 }
 .kontener{
     max-width: 1475px;
@@ -14,6 +18,12 @@
 .hover-properti:hover{
     transform: translateY(-2px);
     box-shadow: 0 -5px 20px rgba(29, 158, 117, 0.2);
+}
+input{
+    color: var(--text-color);
+}
+textarea{
+    color: var(--text-color);
 }
 body {
     background-color: var(--background-color);
@@ -279,4 +289,14 @@ body {
 .harga-angka {
     color: var(--accent-color);
     margin-bottom: 0;
+}
+.tambah-data-button{
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: var(--body-font);
+    font-weight: 600;
+    border: 1px solid var(--primary-color);
+    border-radius: 15px;
+    background-color: rgba(93, 202, 165, 0.3);
+    padding: 10px 15px;
 }

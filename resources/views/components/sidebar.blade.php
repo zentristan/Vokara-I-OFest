@@ -28,7 +28,7 @@
 
     <div class="sidebar-nav">
         <ul>
-            <a href="{{ url('Dashboard') }}"><li class="{{ $route == 'Dashboard' ? 'active' : '' }}"><i class="bi bi-columns-gap"></i>Overview</li></a>
+            <a href="{{ route('dashboard.siswa') }}"><li class="{{ $route == 'dashboard.siswa' ? 'active' : '' }}"><i class="bi bi-columns-gap"></i>Overview</li></a>
             <a href="{{ url('Lamaran') }}"><li class="{{ $route == 'Lamaran' ? 'active' : '' }}"><i class="bi bi-send"></i>Lamaranku</li></a>
             <a href="{{ url('Orderan') }}"><li class="{{ $route == 'Orderan' ? 'active' : '' }}"><i class="bi bi-cart"></i>Orderan</li></a>
             <a href="{{ url('Proyek') }}"><li class="{{ $route == 'Proyek' ? 'active' : '' }}"><i class="bi bi-suitcase-lg"></i>Proyek Aktif</li></a>
@@ -48,8 +48,8 @@
                     {{ __('Log Out') }}
                 </button>
             </form>
-            <a href="{{ url('LowonganJasa') }}"><li><i class="bi bi-rocket-takeoff"></i>Browse Proyek</li></a>  
-            <a href="/PasarJasa"><li><i class="bi bi-rocket-takeoff"></i>Browse Jasa</li></a>  
+            <a href="{{ route('lowongan.index') }}"><li><i class="bi bi-rocket-takeoff"></i>Browse Proyek</li></a>  
+            <a href="{{ route('PasarJasa.index') }}"><li><i class="bi bi-rocket-takeoff"></i>Browse Jasa</li></a>  
 
         </ul>
     </div>

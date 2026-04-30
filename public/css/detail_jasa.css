@@ -9,7 +9,12 @@
     --font-jakarta: 'Jakarta Sans';
     --font-cormorant: 'Cormorant Garamond';
 }
-
+input{
+    color: var(--text-color);
+}
+textarea{
+    color: var(--text-color);
+}
 .text-color {
     color: var(--text-color);
 }

@@ -4,8 +4,8 @@
                 <img class="nav-logo" src="{{ asset("images/VokaraLight.png") }}">
             </div>
             <nav id="nav-link" class="d-flex">
-                <a href="/PasarJasa">Temukan Talenta</a>
-                <a href="/Lowongan">Temukan Proyek</a>
+                <a href="{{ route('PasarJasa.index') }}">Temukan Talenta</a>
+                <a href="{{ route('lowongan.index') }}">Temukan Proyek</a>
             </nav>
             <div class="d-flex gap-2">
 
@@ -47,7 +47,15 @@
                             </li>
                             <hr>
                             <li class="logout d-flex">
-                                <img class="icon-logout" src="{{ asset("images/logout.png") }}"><a href="">Keluar</a>
+                                
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <i class="fa-solid fa-arrow-right-from-bracket" style="color: rgb(224, 242, 236);"></i>
+                                    <button type="submit" class="logout" style="background-color: transparent; border: none; color: white;">
+                                        <i class="bi bi-box-arrow-right"></i>
+                                        {{ __('Log Out') }}
+                                    </button>
+                                </form>
                             </li>
                         </ul>
                     </div>

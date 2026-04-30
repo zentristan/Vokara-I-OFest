@@ -18,6 +18,12 @@ body {
 hr{
     border: 2px solid rgba(217, 217, 217, 0.5);
 }
+input{
+    color: var(--text-color);
+}
+textarea{
+    color: var(--text-color);
+}
 input[type="checkbox"]{
     accent-color: var(--accent-color);
     border-radius: 10px;

@@ -9,25 +9,35 @@ class DashboardController extends Controller
     public function index()
     {
         $user = auth()->user();
-        // $posts = Post::all();
-
 
         if (!$user) {
             return redirect()->route('login');
         }
 
-        // if ($user->role === 'klien') {
-        //     return view('dashboard_admin', compact('posts'));
-        // } elseif ($user->role === 'talent') {
-        //     return view('dashboard_talent', compact('posts'));
+        return match($user->role){
+            'talenta' => redirect()->route('dashboard.siswa'),
+            'mentor' => redirect()->route('dashboard.mentor'),
+            'klien' => redirect()->route('dashboard.klien'),
+            default => abort(403)
+        };
+        // if ($user->role === 'mentor') {
+        //     return view('Dashboard_Mentor.dashboard_mentor');
+        // } elseif ($user->role === 'talenta') {
+        //     return view('Dashboard_Siswa.dashboard_siswa');
+        // } elseif ($user->role === 'klien'){
+        //     return view('Dashboard_Klien.dashboard_klien');
         // }
-        if ($user->role === 'mentor') {
-            return view('Dashboard_Mentor.dashboard_mentor');
-        } elseif ($user->role === 'talent') {
-            return view('Dashboard_Siswa.dashboard_siswa');
-        } elseif ($user->role === 'klien'){
-            return view('Dashboard_Klien.dashboard_klien');
-        }
-        
+    }
+    public function talenta()
+    {
+        return view('Dashboard_Siswa.dashboard_siswa');
+    }
+    public function mentor()
+    {
+        return view('Dashboard_Mentor.dashboard_mentor');
+    }
+    public function klien()
+    {
+        return view('Dashboard_Klien.dashboard_klien');
     }
 }
