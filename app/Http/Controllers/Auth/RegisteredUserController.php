@@ -71,7 +71,7 @@ class RegisteredUserController extends Controller
         
 
         return match($role){
-            'klien' => redirect()->route('dashboard.mentor'),
+            'klien' => redirect()->route('dashboard.klien'),
             'talenta' => redirect()->route('dashboard.siswa'),
             'mentor' => redirect()->route('dashboard.mentor')
         };

@@ -15,19 +15,19 @@ Route::get('/', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/Dashboard', function () {
-    return view('Dashboard_Siswa.dashboard_siswa');
-})->name('dashboard.siswa');
+// Route::get('/Dashboard', function () {
+//     return view('Dashboard_Siswa.dashboard_siswa');
+// })->name('dashboard.siswa');
 
-Route::get('/Dashboard_Mentor', function () {
-    return view('Dashboard_Mentor.dashboard_mentor');
-})->name('dashboard.mentor');
+// Route::get('/Dashboard_Mentor', function () {
+//     return view('Dashboard_Mentor.dashboard_mentor');
+// })->name('dashboard.mentor');
 
 Route::get('/PasarJasa', [talentaController::class, 'index'])->name('PasarJasa.index');
 
 Route::get('/LandingPage', function () {
     return view('Landing_Page/index');
-});
+})->name('landingPage');
 
 Route::get('/Lamaran', function () {
     return view('Lamaran_Siswa.lamaran_siswa');
@@ -61,13 +61,15 @@ Route::get('/Keterangan-Diterima', function () {
     return view('Keterangan_siswa.keterangan_siswa_diterima');
 });
 
-Route::get('/Login', function () {
-    return view('Register_Page/login');
+Route::get('/login', function () {
+    return view('auth/login');
 })-> name('login');
 
 Route::get('/register', function () {
     return view('auth.register-choosing');
 })-> name('register');
+
+Route::get('/lowongan', [KlienJobsController::class, 'index'])->name('lowongan.index');
 
 Route::get('/LowonganJasa/{id}', [KlienJobsController::class, 'show'])->name('LowonganJasa.show');
 

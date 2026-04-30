@@ -45,10 +45,10 @@ $route = request()->route()->getName();
                 </button>
             </form>
 
-            <a href="{{ url('LowonganJasa') }}">
+            <a href="{{ route('lowongan.index') }}">
                 <li><i class="bi bi-rocket-takeoff"></i>Lihat Proyek</li>
             </a>
-            <a href="{{ url('PasarJasa') }}">
+            <a href="{{ route('PasarJasa.index') }}">
                 <li><i class="bi bi-rocket-takeoff"></i>Lihat Talenta</li>
             </a>
         </ul>

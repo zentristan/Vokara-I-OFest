@@ -23,7 +23,15 @@
                         <hr>
                         <ul class="dropdown-link m-0 p-0">
                             <li>
-                                <a href="{{route('dashboard')}}">Profile</a>
+                                <a href="
+        @if(auth()->user()->role === 'talenta')
+            {{ route('dashboard.siswa') }}
+        @elseif(auth()->user()->role === 'klien')
+            {{ route('dashboard.klien') }}
+        @else
+            {{ route('dashboard.mentor') }}
+        @endif
+    ">Profile</a>
                             </li>
                             <li>
                                 <a href="">Ubah Profil</a>

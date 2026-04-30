@@ -86,8 +86,8 @@
                                     @error('password') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                                 </div>
                                 <div class="mt-4">
-                                    <label>Konfirmasi Kata Sandi</label>
-                                    <input type="password" name="password_confirmation" required />
+                                    <label style="color: rgb(224, 242, 236);">Konfirmasi Kata Sandi</label>
+                                    <input type="password" name="password_confirmation" class="input-box w-full" required />
                                 </div>
                             </div>
                             <div class="flex justify-between">
@@ -104,6 +104,7 @@
             </div>
         </div>
     </section>
+    <script src="{{ asset('js/Register-klien.js') }}"></script>
 </body>
 
 </html>
