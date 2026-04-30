@@ -43,11 +43,11 @@
                 </div>
                 <div class="nav-menu d-flex">
                     <a href="/PasarJasa" class="nav-link">Temukan Talenta</a>
-                    <a href="/Lowongan" class="nav-link">Temukan Proyek</a>
+                    <a href="{{ route('lowongan.index')}}" class="nav-link">Temukan Proyek</a>
                 </div>
                 <div class="nav-button d-flex">
                     <a href="{{ route('register')}}" class="btn-primary">Daftar Gratis</a>
-                    <a href="/login" class=btn-secondary>Masuk</a>
+                    <a href="{{ route('login')}}" class=btn-secondary>Masuk</a>
                 </div>
                 <div class="hamburger" id="hamburger">
                     <span></span>
